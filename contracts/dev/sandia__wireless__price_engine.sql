@@ -196,10 +196,10 @@ END CATCH
 
 /** PRICE RULE TWO **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.051'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'HPI - Level 2 - Non-CTO - Thin Client';
 
     /** PRICE ENGINE MERGE **/
@@ -350,10 +350,10 @@ END CATCH
     
 /** PRICE RULE THREE **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.295'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'HPI - Level 2 - CTO - Tablet';
 
     /** PRICE ENGINE MERGE **/
@@ -503,10 +503,10 @@ END CATCH
 
 /** PRICE RULE FOUR **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.1152'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'HPI - Level 2 - Non-CTO - Tablet';
 
     /** PRICE ENGINE MERGE **/
@@ -657,10 +657,10 @@ END CATCH
 
 /** PRICE RULE FIVE **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.34'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'HPI - Level 2 - CTO - Laptop';
 
     /** PRICE ENGINE MERGE **/
@@ -809,10 +809,10 @@ END CATCH
 
 /** PRICE RULE SIX **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.0877'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'HPI - Level 2 - Non-CTO - Laptop';
 
     /** PRICE ENGINE MERGE **/
@@ -962,10 +962,10 @@ END CATCH
 
 /** PRICE RULE SEVEN **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.29'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'HPI - Level 2 - CTO - Desktop';
 
     /** PRICE ENGINE MERGE **/
@@ -1115,10 +1115,10 @@ END CATCH
 
 /** PRICE RULE EIGHT **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.095'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'HPI - Level 2 - Non-CTO - Desktop';
 
     /** PRICE ENGINE MERGE **/
@@ -1268,10 +1268,10 @@ END CATCH
 
 /** PRICE RULE NINE **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.34'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'HPI - Level 2 - Workstation';
 
     /** PRICE ENGINE MERGE **/
@@ -1421,10 +1421,10 @@ END CATCH
 
 /** PRICE RULE TEN **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.1243'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'HPI - Level 2 - Non-CTO - Workstation';
 
     /** PRICE ENGINE MERGE **/
@@ -1573,10 +1573,10 @@ END CATCH
 
 /** PRICE RULE TEN **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.0715'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'HPI - Level 2 - Non-CTO - MONITORS';
 
     /** PRICE ENGINE MERGE **/
@@ -1725,10 +1725,10 @@ END CATCH
 
     /** PRICE RULE TEN **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.23'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'HPI - Level 2 - Non-CTO - PRINTERS';
 
     /** PRICE ENGINE MERGE **/
@@ -1877,10 +1877,10 @@ END CATCH
 
     /** PRICE RULE TEN **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.38'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'HPE - CTO - Networking Solution';
 
     /** PRICE ENGINE MERGE **/
@@ -2029,10 +2029,10 @@ END CATCH
 
     /** PRICE RULE TEN **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.325'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'HPE - Non-CTO - Networking Solution';
 
     /** PRICE ENGINE MERGE **/
@@ -2182,10 +2182,10 @@ END CATCH
 
     /** PRICE RULE TEN **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.283'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'HPE - CTO and Non-CTO - Aruba Networking Solutions';
 
     /** PRICE ENGINE MERGE **/
@@ -2335,10 +2335,10 @@ END CATCH
 
     /** PRICE RULE TEN **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.1216'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'HPE - SBUY - Entry, Mid, and High Level Servers';
 
     /** PRICE ENGINE MERGE **/
@@ -2487,10 +2487,10 @@ END CATCH
 
     /** PRICE RULE TEN **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.26'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'HP - Storage Devices (HSD)';
 
     /** PRICE ENGINE MERGE **/
@@ -2639,10 +2639,10 @@ END CATCH
 
     /** PRICE RULE TEN **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.26'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'NOT HP - Storage Devices (HSD)';
 
     /** PRICE ENGINE MERGE **/
@@ -2792,10 +2792,10 @@ END CATCH
 
     /** PRICE RULE TEN **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.31'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'HP - System Components';
 
     /** PRICE ENGINE MERGE **/
@@ -2944,10 +2944,10 @@ END CATCH
 
     /** PRICE RULE TEN **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.21'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'Not HP - System Components';
 
     /** PRICE ENGINE MERGE **/
@@ -3096,10 +3096,10 @@ END CATCH
 
     /** PRICE RULE TEN **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.36'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'HP - Printer Supplies';
 
     /** PRICE ENGINE MERGE **/
@@ -3248,10 +3248,10 @@ END CATCH
 
     /** PRICE RULE TEN **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.36'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'Not HP - Printer Supplies (Not Ink)';
 
     /** PRICE ENGINE MERGE **/
@@ -3401,10 +3401,10 @@ END CATCH
 
     /** PRICE RULE TEN **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.21'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'HP - 3rd Party Software';
 
     /** PRICE ENGINE MERGE **/
@@ -3553,10 +3553,10 @@ END CATCH
 
     /** PRICE RULE TEN **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.41'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'HP - Cables';
 
     /** PRICE ENGINE MERGE **/
@@ -3705,10 +3705,10 @@ END CATCH
 
     /** PRICE RULE TEN **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.21'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'Not HP - Cables';
 
     /** PRICE ENGINE MERGE **/
@@ -3857,10 +3857,10 @@ END CATCH
 
     /** PRICE RULE TEN **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.22'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'HP - Large Format Printer (HLP)';
 
     /** PRICE ENGINE MERGE **/
@@ -4010,10 +4010,10 @@ END CATCH
 
     /** PRICE RULE TEN **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.37'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'HP - Ink & Toner';
 
     /** PRICE ENGINE MERGE **/
@@ -4163,10 +4163,10 @@ END CATCH
 
     /** PRICE RULE TEN **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.22'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'HP - Imaging Devices (HID)';
 
     /** PRICE ENGINE MERGE **/
@@ -4317,10 +4317,10 @@ END CATCH
 
     /** PRICE RULE TEN **/
 BEGIN TRY
-    DECLARE @PriceRuleDiscount AS FLOAT;
+--     DECLARE @PriceRuleDiscount AS FLOAT;
     SET @PriceRuleDiscount = '0.22'; -- Set Discount Percentage Here
 
-    DECLARE @PriceRuleName AS VARCHAR(150);
+--     DECLARE @PriceRuleName AS VARCHAR(150);
     SET @PriceRuleName = 'Non-HP Imaging Devices';
 
     /** PRICE ENGINE MERGE **/
