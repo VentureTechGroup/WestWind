@@ -109,7 +109,8 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
+        -- RecordID,
                 GSAPrice,
                 Price,
                 ContractID,
@@ -117,7 +118,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -144,7 +145,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                -- source.RecordID,
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -152,7 +153,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
