@@ -49,12 +49,23 @@ BEGIN TRY
 
     USING (
         SELECT
-        price_cat.Price,
-        price_cat.Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
-        master_cat.*
-        FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
-        JOIN [WWProjectCatalog].[dbo].[MasterCatalog] as master_cat
-        ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (
             master_cat.etilizeCatId IN ('4873','5148','10154','10247','10282','11099','11748')
             OR master_cat.etilizeParentCatId IN ('4873','5148','10154','10247','10282','11099','11748')
@@ -76,7 +87,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -103,7 +114,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -111,7 +122,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -138,7 +149,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -146,7 +157,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -196,12 +207,23 @@ BEGIN TRY
 
     USING (
         SELECT
-        price_cat.Price,
-        price_cat.Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
-        master_cat.*
-        FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
-        JOIN [WWProjectCatalog].[dbo].[MasterCatalog] as master_cat
-        ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4830') OR master_cat.etilizeParentCatId IN ('4830')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search NOT LIKE '% SBUY %'
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -218,7 +240,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -245,7 +267,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -253,7 +275,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -280,7 +302,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -288,7 +310,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -339,12 +361,23 @@ BEGIN TRY
 
     USING (
         SELECT
-        price_cat.Price,
-        price_cat.Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
-        master_cat.*
-        FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
-        JOIN [WWProjectCatalog].[dbo].[MasterCatalog] as master_cat
-        ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('10025') OR master_cat.etilizeParentCatId IN ('10025')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search NOT LIKE '% SBUY %'
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -361,7 +394,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -388,7 +421,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -396,7 +429,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -423,7 +456,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -431,7 +464,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -480,6 +513,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('10025') OR master_cat.etilizeParentCatId IN ('10025')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search LIKE '% SBUY %'
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -496,7 +547,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -523,7 +574,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -531,7 +582,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -558,7 +609,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -566,7 +617,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -616,6 +667,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId  IN ('4876','10285','11925','4830') OR master_cat.etilizeParentCatId  IN ('4876','10285','11925','4830')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search NOT LIKE '% SBUY %'
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -632,7 +701,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -659,7 +728,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -667,7 +736,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -694,7 +763,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -702,7 +771,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -750,6 +819,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4876','10285','11925','4830') OR master_cat.etilizeParentCatId IN ('4876','10285','11925','4830')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search LIKE '% SBUY %'
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -766,7 +853,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -793,7 +880,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -801,7 +888,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -828,7 +915,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -836,7 +923,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -885,6 +972,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4871') OR master_cat.etilizeParentCatId IN ('4871')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search NOT LIKE '% SBUY %'
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -901,7 +1006,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -928,7 +1033,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -936,7 +1041,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -963,7 +1068,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -971,7 +1076,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -1020,6 +1125,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4871') OR master_cat.etilizeParentCatId IN ('4871')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search LIKE '% SBUY %'
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -1036,7 +1159,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -1063,7 +1186,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -1071,7 +1194,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -1098,7 +1221,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -1106,7 +1229,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -1155,6 +1278,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4872') OR master_cat.etilizeParentCatId IN ('4872')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search NOT LIKE '% SBUY %'
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -1171,7 +1312,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -1198,7 +1339,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -1206,7 +1347,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -1233,7 +1374,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -1241,7 +1382,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -1290,6 +1431,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4872') OR master_cat.etilizeParentCatId IN ('4872')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search LIKE '% SBUY %'
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -1306,7 +1465,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -1333,7 +1492,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -1341,7 +1500,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -1368,7 +1527,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -1376,7 +1535,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -1424,6 +1583,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4831','10165') OR master_cat.etilizeParentCatId IN ('4831','10165')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search NOT LIKE '% SBUY %'
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -1440,7 +1617,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -1467,7 +1644,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -1475,7 +1652,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -1502,7 +1679,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -1510,7 +1687,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -1558,6 +1735,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4805','4807','4810','4816','4820','4821','4822','10153','10294','10914','11655') OR master_cat.etilizeParentCatId IN ('4805','4807','4810','4816','4820','4821','4822','10153','10294','10914','11655')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search NOT LIKE '% SBUY %'
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -1574,7 +1769,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -1601,7 +1796,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -1609,7 +1804,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -1636,7 +1831,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -1644,7 +1839,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -1692,6 +1887,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4813','4823','10040','10251','10291','10931','11099','11158','11164','11748','11752') OR master_cat.etilizeParentCatId IN ('4813','4823','10040','10251','10291','10931','11099','11158','11164','11748','11752')) AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862') AND master_cat.search NOT LIKE '% SBUY %'
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -1708,7 +1921,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -1735,7 +1948,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -1743,7 +1956,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -1770,7 +1983,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -1778,7 +1991,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -1826,6 +2039,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4813','4823','10040','10251','10291','10931','11099','11158','11164','11748','11752') OR master_cat.etilizeParentCatId IN ('4813','4823','10040','10251','10291','10931','11099','11158','11164','11748','11752')) AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862') AND master_cat.search LIKE '% SBUY %'
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -1842,7 +2073,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -1869,7 +2100,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -1877,7 +2108,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -1904,7 +2135,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -1912,7 +2143,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -1961,6 +2192,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862') AND master_cat.Description LIKE '%Aruba%'
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -1977,7 +2226,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -2004,7 +2253,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -2012,7 +2261,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -2039,7 +2288,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -2047,7 +2296,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -2096,6 +2345,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4873','5148','10154','10247','10282','11099','11748') OR master_cat.etilizeParentCatId IN ('4873','5148','10154','10247','10282','11099','11748')) AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862')
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -2112,7 +2379,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -2139,7 +2406,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -2147,7 +2414,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -2174,7 +2441,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -2182,7 +2449,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -2230,6 +2497,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4907','5167','10061','1010','10154','10465','10468','10692','10808','10931','11493','11611') OR master_cat.etilizeParentCatId IN ('4907','5167','10061','1010','10154','10465','10468','10692','10808','10931','11493','11611')) AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862','1063888','1063891','1063976','1063979','1042796','1043456','1046484')
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -2246,7 +2531,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -2273,7 +2558,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -2281,7 +2566,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -2308,7 +2593,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -2316,7 +2601,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -2364,6 +2649,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4907','5167','10061','1010','10154','10465','10468','10692','10808','10931','11493','11611') OR master_cat.etilizeParentCatId IN ('4907','5167','10061','1010','10154','10465','10468','10692','10808','10931','11493','11611')) AND master_cat.etilizeMfgId IN ('102251','101210','10237','10220','10406','10418','102304','10563','10353','1020570','1030062','10227','1036611','10322','10301','10227','10943','1023145','1026045','1029114','1032356','1035747','1044946','1045024','1046866','1020376','1029553','1030008','1025881','1036136','1039004','101950','1034465','1026916')
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -2380,7 +2683,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -2407,7 +2710,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -2415,7 +2718,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -2442,7 +2745,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -2450,7 +2753,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -2499,6 +2802,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('5181') OR master_cat.etilizeParentCatId IN ('5181')) AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862','1063888','1063891','1063976','1063979','1042796','1043456','1046484')
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -2515,7 +2836,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -2542,7 +2863,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -2550,7 +2871,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -2577,7 +2898,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -2585,7 +2906,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -2633,6 +2954,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('5181') OR master_cat.etilizeParentCatId IN ('5181')) AND master_cat.etilizeMfgId IN ('102251','101210','10237','10220','10406','10418','102304','10563','10353','1020570','1030062','10227','1036611','10322','10301','10227','10943','1023145','1026045','1029114','1032356','1035747','1044946','1045024','1046866','1020376','1029553','1030008','1025881','1036136','1039004','101950','1034465','1026916')
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -2649,7 +2988,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -2676,7 +3015,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -2684,7 +3023,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -2711,7 +3050,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -2719,7 +3058,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -2767,6 +3106,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('11040') OR master_cat.etilizeParentCatId IN ('11040')) AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862','1063888','1063891','1063976','1063979','1042796','1043456','1046484')
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -2783,7 +3140,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -2810,7 +3167,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -2818,7 +3175,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -2845,7 +3202,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -2853,7 +3210,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -2901,6 +3258,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('11040') OR master_cat.etilizeParentCatId IN ('11040')) AND master_cat.etilizeMfgId IN ('102251','101210','10237','10220','10406','10418','102304','10563','10353','1020570','1030062','10227','1036611','10322','10301','10227','10943','1023145','1026045','1029114','1032356','1035747','1044946','1045024','1046866','1020376','1029553','1030008','1025881','1036136','1039004','101950','1034465','1026916')
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -2917,7 +3292,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -2944,7 +3319,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -2952,7 +3327,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -2979,7 +3354,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -2987,7 +3362,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -3036,6 +3411,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('5160','10007','10052','10114') OR master_cat.etilizeParentCatId IN ('5160','10007','10052','10114')) AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862','1063888','1063891','1063976','1063979','1042796','1043456','1046484')
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -3052,7 +3445,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -3079,7 +3472,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -3087,7 +3480,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -3114,7 +3507,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -3122,7 +3515,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -3170,6 +3563,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('5153') OR master_cat.etilizeParentCatId IN ('5153')) AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862','1063888','1063891','1063976','1063979','1042796','1043456','1046484')
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -3186,7 +3597,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -3213,7 +3624,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -3221,7 +3632,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -3248,7 +3659,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -3256,7 +3667,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -3304,6 +3715,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('5153') OR master_cat.etilizeParentCatId IN ('5153')) AND master_cat.etilizeMfgId IN ('102251','101210','10237','10220','10406','10418','102304','10563','10353','1020570','1030062','10227','1036611','10322','10301','10227','10943','1023145','1026045','1029114','1032356','1035747','1044946','1045024','1046866','1020376','1029553','1030008','1025881','1036136','1039004','101950','1034465','1026916')
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -3320,7 +3749,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -3347,7 +3776,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -3355,7 +3784,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -3382,7 +3811,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -3390,7 +3819,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -3438,6 +3867,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4822') OR master_cat.etilizeParentCatId IN ('4822')) AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862','1063888','1063891','1063976','1063979','1042796','1043456','1046484')
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -3454,7 +3901,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -3481,7 +3928,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -3489,7 +3936,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -3516,7 +3963,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -3524,7 +3971,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -3573,6 +4020,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('10015') OR master_cat.etilizeParentCatId IN ('10015')) AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862','1063888','1063891','1063976','1063979','1042796','1043456','1046484')
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -3589,7 +4054,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -3616,7 +4081,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -3624,7 +4089,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -3651,7 +4116,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -3659,7 +4124,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -3708,6 +4173,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4911','4912','5123','10167','10333','10663','10910','11757') OR master_cat.etilizeParentCatId IN ('4911','4912','5123','10167','10333','10663','10910','11757')) AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862','1063888','1063891','1063976','1063979','1042796','1043456','1046484')
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -3724,7 +4207,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -3751,7 +4234,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -3759,7 +4242,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -3786,7 +4269,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -3794,7 +4277,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -3844,6 +4327,24 @@ BEGIN TRY
     MERGE INTO [wwcp_pricing].[dbo].[ContractItem_temp] WITH (HOLDLOCK) AS target
 
     USING (
+        SELECT
+    price_cat.Cost,
+    master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+    master_cat.Vendor_Name,
+    master_cat.Vendor_Part_Number,
+    master_cat.Vendor_Part_Number_Stripped,
+    master_cat.Description,
+    master_cat.ImageURL,
+    master_cat.Weight,
+    master_cat.EtilizeProductID,
+    master_cat.EtilizeParentCatID,
+    master_cat.EtilizeCatID,
+    master_cat.ProductName,
+    master_cat.Dist_ID,
+    master_cat.Dist_Part_Number
+    FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
+    JOIN [catservices].[dbo].[MasterCatalog] as master_cat
+    ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4911','4912','5123','10167','10333','10663','10910','11757') OR master_cat.etilizeParentCatId IN ('4911','4912','5123','10167','10333','10663','10910','11757')) AND master_cat.etilizeMfgId IN ('102251','101210','10237','10220','10406','10418','102304','10563','10353','1020570','1030062','10227','1036611','10322','10301','10227','10943','1023145','1026045','1029114','1032356','1035747','1044946','1045024','1046866','1020376','1029553','1030008','1025881','1036136','1039004','101950','1034465','1026916')
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -3860,7 +4361,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
@@ -3887,7 +4388,7 @@ BEGIN TRY
 
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
+        INSERT (
                 GSAPrice,
                 Price,
                 ContractID,
@@ -3895,7 +4396,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-    --             Cost, -- TODO: Confirm Cost Field
+                Cost, -- TODO: Confirm Cost Field
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -3922,7 +4423,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                source.RecordID,
+                
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -3930,7 +4431,7 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
+                source.Cost, -- TODO: Confirm Cost Field
                 NULL,
                 NULL,
                 @ContractNumber,
@@ -3973,128 +4474,78 @@ END CATCH
 */
 
 BEGIN TRY
-    SET @PriceRuleDiscount = ''; -- Set Discount Percentage Here
-    SET @PriceRuleName = '';
+SET @PriceRuleDiscount = ''; -- Set Discount Percentage Here
+SET @PriceRuleName = '';
 
-    /** PRICE ENGINE MERGE **/
-    MERGE INTO [wwcp].[dbo].[ContractItem] WITH (HOLDLOCK) AS target
 
-    USING (
-        SELECT
-        *
-        FROM [wwcp_pricing].[dbo].[ContractItem_temp]
-        WHERE ContractID = @DestinationContractId
-    ) AS source
-    ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
-    AND (target.Dist_PartNumber = source.Dist_PartNumber) -- AND DIST_PARTNUMBER
-    AND (target.ContractID = @DestinationContractId) -- AND THE CONTRACT ID
-
-    -- Update Existing Rows
-    WHEN MATCHED THEN
-        UPDATE SET
-            target.Price = source.Price, -- References Discounted/Calculated Price
-            target.GSAPrice = source.GSAPrice, -- References Discounted/Calculated Price
-            target.ContractID = @DestinationContractId, -- References @DestinationContractId
-            target.Vendor = source.Vendor,
-            target.VendorPartNumber = source.VendorPartNumber,
-            target.VendorPartNumberStripped = source.VendorPartNumberStripped,
-            target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
-            target.Notes = + source.Notes,
-            target.CLIN = source.CLIN,
-            target.ContractNumber = source.ContractNumber, -- References @ContractNumber
-            target.StartDate = source.StartDate,
-            target.EndDate = source.EndDate,
-            target.ImageUrl = source.ImageURL,
-            target.Weight = source.Weight,
-            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
-            target.Show_On_Storesite = source.Show_On_Storesite, -- True
-            target.EtilizeProductID = source.EtilizeProductID,
-            target.ParentCategoryID = source.ParentCategoryID,
-            target.CategoryID = source.CategoryID,
-            target.ProductName = source.ProductName,
-            target.Dist_ID = source.Dist_ID,
-            target.Dist_PartNumber = source.Dist_PartNumber,
-            target.Status = source.Status,
-            target.GroupID = source.GroupID,
-            target.IsBundle = source.IsBundle,
-            target.Unit = source.Unit,
-            target.Discount = source.Discount,
-            target.Retail_PriceAutoCalculate = source.Retail_PriceAutoCalculate,
-            target.Taxable = source.Taxable,
-            target.GSAPrice_AutoCalculate = source.GSAPrice_AutoCalculate
-
-    -- Insert New Rows
-    WHEN NOT MATCHED BY TARGET THEN
-        INSERT (RecordID,
-                GSAPrice,
-                Price,
-                ContractID,
-                Vendor,
-                VendorPartNumber,
-                VendorPartNumberStripped,
-                Description,
-    --             Cost, -- TODO: Confirm Cost Field
-                Notes,
-                CLIN,
-                ContractNumber,
-                StartDate,
-                DateCreated,
-                EndDate,
-                ImageUrl,
-                Weight,
-                Retail_Price,
-                Show_On_Storesite,
-                EtilizeProductID,
-                ParentCategoryID,
-                CategoryID,
-                ProductName,
-                Dist_ID,
-                Dist_PartNumber,
-                Status,
-                GroupID,
-                IsBundle,
-                Unit,
-                Discount,
-                Retail_PriceAutoCalculate,
-                Taxable,
-                GSAPrice_AutoCalculate
-            )
-        VALUES (
-                source.RecordID,
-                source.GSAPrice,
-                source.Price,
-                @DestinationContractId,
-                source.Vendor,
-                source.VendorPartNumber,
-                source.VendorPartNumberStripped,
-                source.Description,
-    --             source.Cost, -- TODO: Confirm Cost Field
-                source.Notes,
-                source.CLIN,
-                @ContractNumber,
-                source.StartDate,
-                source.DateCreated, -- Created Date
-                source.EndDate,
-                source.ImageURL,
-                source.Weight,
-                source.Retail_Price,
-                source.Show_On_Storesite,
-                source.EtilizeProductID,
-                source.ParentCategoryID,
-                source.CategoryID,
-                source.ProductName,
-                source.Dist_ID,
-                source.Dist_PartNumber,
-                source.Status, -- Status is 0
-                source.GroupID,
-                source.IsBundle,
-                source.Unit,
-                source.Discount,
-                source.Retail_PriceAutoCalculate,
-                source.Taxable,
-                source.GSAPrice_AutoCalculate
-                );
+INSERT INTO [192.168.80.162].[wwcp].[dbo].[ContractItem] (GSAPrice,
+                                                          Price,
+                                                          ContractID,
+                                                          Vendor,
+                                                          VendorPartNumber,
+                                                          VendorPartNumberStripped,
+                                                          Description,
+                                                          Cost, -- TODO: Confirm Cost Field
+                                                          Notes,
+                                                          CLIN,
+                                                          ContractNumber,
+                                                          StartDate,
+                                                          DateCreated,
+                                                          EndDate,
+                                                          ImageUrl,
+                                                          Weight,
+                                                          Retail_Price,
+                                                          Show_On_Storesite,
+                                                          EtilizeProductID,
+                                                          ParentCategoryID,
+                                                          CategoryID,
+                                                          ProductName,
+                                                          Dist_ID,
+                                                          Dist_PartNumber,
+                                                          Status,
+                                                          GroupID,
+                                                          IsBundle,
+                                                          Unit,
+                                                          Discount,
+                                                          Retail_PriceAutoCalculate,
+                                                          Taxable,
+                                                          GSAPrice_AutoCalculate)
+SELECT (
+        GSAPrice,
+        Price,
+        @DestinationContractId,
+        Vendor,
+        VendorPartNumber,
+        VendorPartNumberStripped,
+        Description,
+        Cost, -- TODO: Confirm Cost Field
+        Notes,
+        CLIN,
+        @ContractNumber,
+        StartDate,
+        DateCreated, -- Created Date
+        EndDate,
+        ImageURL,
+        Weight,
+        Retail_Price,
+        Show_On_Storesite,
+        EtilizeProductID,
+        ParentCategoryID,
+        CategoryID,
+        ProductName,
+        Dist_ID,
+        Dist_PartNumber,
+        Status, -- Status is 0
+        GroupID,
+        IsBundle,
+        Unit,
+        Discount,
+        Retail_PriceAutoCalculate,
+        Taxable,
+        GSAPrice_AutoCalculate
+           )
+FROM [wwcp_pricing].[dbo].[ContractItem_temp]
+WHERE ContractID = @DestinationContractId
 
 END TRY
 BEGIN CATCH
