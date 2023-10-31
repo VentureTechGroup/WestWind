@@ -4475,6 +4475,7 @@ END CATCH
 
 BEGIN TRY
 
+/** DELETE ContractItems created during prior runs (FILTERED to single ContractId**/
 DELETE FROM [192.168.80.162].[wwcp].[dbo].[ContractItem] WHERE ContractID = @DestinationContractId;
 
 SET @PriceRuleDiscount = ''; -- Set Discount Percentage Here
@@ -4552,3 +4553,5 @@ END TRY
 BEGIN CATCH
     PRINT 'There was an error conducting the MERGE Statement from ContractItem_temp to ContractItems. No ContractItems created.';
 END CATCH
+
+
