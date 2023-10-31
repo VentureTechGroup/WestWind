@@ -13,7 +13,7 @@
 *
 **/
 DECLARE @DestinationContractId AS INT;
-SET @DestinationContractId = 55;
+SET @DestinationContractId = 60;
 
 DECLARE @ContractNumber AS VARCHAR(100);
 SET @ContractNumber = ''
