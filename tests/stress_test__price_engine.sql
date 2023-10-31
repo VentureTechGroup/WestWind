@@ -199,7 +199,7 @@ BEGIN TRY
     SET @PriceRuleName = '';
 
     /** PRICE ENGINE MERGE **/
-    MERGE INTO [wwcp].[dbo].[ContractItem] WITH (HOLDLOCK) AS target
+    MERGE INTO [192.168.80.162].[wwcp].[dbo].[ContractItem] WITH (HOLDLOCK) AS target
 
     USING (
         SELECT
