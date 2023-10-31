@@ -50,11 +50,22 @@ BEGIN TRY
 
     USING (
         SELECT
-        price_cat.Price,
-        price_cat.Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
-        master_cat.*
+        price_cat.Cost,
+        master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
+        master_cat.Vendor_Name,
+        master_cat.Vendor_Part_Number,
+        master_cat.Vendor_Part_Number_Stripped,
+        master_cat.Description,
+        master_cat.ImageURL,
+        master_cat.Weight,
+        master_cat.EtilizeProductID,
+        master_cat.EtilizeParentCatID,
+        master_cat.EtilizeCatID,
+        master_cat.ProductName,
+        master_cat.Dist_ID,
+        master_cat.Dist_Part_Number
         FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
-        JOIN [WWProjectCatalog].[dbo].[MasterCatalog] as master_cat
+        JOIN [catservices].[dbo].[MasterCatalog] as master_cat
         ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -71,7 +82,7 @@ BEGIN TRY
             target.VendorPartNumber = source.Vendor_Part_Number,
             target.VendorPartNumberStripped = source.Vendor_Part_Number_Stripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
             target.CLIN = NULL,
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
