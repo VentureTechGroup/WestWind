@@ -4552,5 +4552,3 @@ END TRY
 BEGIN CATCH
     PRINT 'There was an error conducting the MERGE Statement from ContractItem_temp to ContractItems. No ContractItems created.';
 END CATCH
-
-
