@@ -233,8 +233,7 @@ BEGIN TRY
             Taxable,
             GSAPrice_AutoCalculate
         )
-    SELECT (
-            GSAPrice,
+    SELECT  GSAPrice,
             Price,
             @DestinationContractId,
             Vendor,
@@ -266,7 +265,6 @@ BEGIN TRY
             Retail_PriceAutoCalculate,
             Taxable,
             GSAPrice_AutoCalculate
-            )
     FROM [wwcp_pricing].[dbo].[ContractItem_temp]
     WHERE ContractID = @DestinationContractId
 
