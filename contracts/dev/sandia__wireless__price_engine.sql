@@ -4474,6 +4474,9 @@ END CATCH
 */
 
 BEGIN TRY
+
+DELETE FROM [192.168.80.162].[wwcp].[dbo].[ContractItem] WHERE ContractID = @DestinationContractId;
+
 SET @PriceRuleDiscount = ''; -- Set Discount Percentage Here
 SET @PriceRuleName = '';
 
