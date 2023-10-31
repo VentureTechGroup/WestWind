@@ -1,7 +1,7 @@
 /**
 *
 * WESTWIND: Sandia Price Engine (Incl. Wireless)
-*
+* *
 **/
 
 -- TEMP TABLE: [wwcp_pricing].[dbo].[ContractItem_temp]
