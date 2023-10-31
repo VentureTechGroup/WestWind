@@ -110,7 +110,6 @@ BEGIN TRY
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
         INSERT (
-        -- RecordID,
                 GSAPrice,
                 Price,
                 ContractID,
@@ -145,7 +144,6 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                -- source.RecordID,
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -251,7 +249,6 @@ BEGIN TRY
     -- Insert New Rows
     WHEN NOT MATCHED BY TARGET THEN
         INSERT (
-        --RecordID,
                 GSAPrice,
                 Price,
                 ContractID,
@@ -286,7 +283,6 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                -- source.RecordID,
                 source.GSAPrice,
                 source.Price,
                 @DestinationContractId,
