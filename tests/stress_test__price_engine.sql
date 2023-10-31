@@ -221,7 +221,7 @@ BEGIN TRY
             target.VendorPartNumber = source.VendorPartNumber,
             target.VendorPartNumberStripped = source.VendorPartNumberStripped,
             target.Description = source.Description,
-            -- target.Cost = source.Cost, -- TODO Review Cost Field
+            target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + source.Notes,
             target.CLIN = source.CLIN,
             target.ContractNumber = source.ContractNumber, -- References @ContractNumber
