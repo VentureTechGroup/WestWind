@@ -1,7 +1,7 @@
 /**
 *
 * WESTWIND: Sandia Price Engine (Incl. Wireless)
-* *
+*
 **/
 
 -- TEMP TABLE: [wwcp_pricing].[dbo].[ContractItem_temp]
@@ -4510,8 +4510,7 @@ INSERT INTO [192.168.80.162].[wwcp].[dbo].[ContractItem] (GSAPrice,
                                                           Retail_PriceAutoCalculate,
                                                           Taxable,
                                                           GSAPrice_AutoCalculate)
-SELECT (
-        GSAPrice,
+SELECT GSAPrice,
         Price,
         @DestinationContractId,
         Vendor,
@@ -4543,7 +4542,6 @@ SELECT (
         Retail_PriceAutoCalculate,
         Taxable,
         GSAPrice_AutoCalculate
-           )
 FROM [wwcp_pricing].[dbo].[ContractItem_temp]
 WHERE ContractID = @DestinationContractId
 
