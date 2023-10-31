@@ -198,124 +198,77 @@ BEGIN TRY
     SET @PriceRuleDiscount = ''; -- Set Discount Percentage Here
     SET @PriceRuleName = '';
 
-    /** PRICE ENGINE MERGE **/
-    MERGE INTO [192.168.80.162].[wwcp].[dbo].[ContractItem] WITH (HOLDLOCK) AS target
 
-    USING (
-        SELECT
-        *
-        FROM [wwcp_pricing].[dbo].[ContractItem_temp]
-        WHERE ContractID = @DestinationContractId
-    ) AS source
-    ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
-    AND (target.Dist_PartNumber = source.Dist_PartNumber) -- AND DIST_PARTNUMBER
-    AND (target.ContractID = @DestinationContractId) -- AND THE CONTRACT ID
-
-    -- Update Existing Rows
-    WHEN MATCHED THEN
-        UPDATE SET
-            target.Price = source.Price, -- References Discounted/Calculated Price
-            target.GSAPrice = source.GSAPrice, -- References Discounted/Calculated Price
-            target.ContractID = @DestinationContractId, -- References @DestinationContractId
-            target.Vendor = source.Vendor,
-            target.VendorPartNumber = source.VendorPartNumber,
-            target.VendorPartNumberStripped = source.VendorPartNumberStripped,
-            target.Description = source.Description,
-            target.Cost = source.Cost, -- TODO Review Cost Field
-            target.Notes = + source.Notes,
-            target.CLIN = source.CLIN,
-            target.ContractNumber = source.ContractNumber, -- References @ContractNumber
-            target.StartDate = source.StartDate,
-            target.EndDate = source.EndDate,
-            target.ImageUrl = source.ImageURL,
-            target.Weight = source.Weight,
-            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
-            target.Show_On_Storesite = source.Show_On_Storesite, -- True
-            target.EtilizeProductID = source.EtilizeProductID,
-            target.ParentCategoryID = source.ParentCategoryID,
-            target.CategoryID = source.CategoryID,
-            target.ProductName = source.ProductName,
-            target.Dist_ID = source.Dist_ID,
-            target.Dist_PartNumber = source.Dist_PartNumber,
-            target.Status = source.Status,
-            target.GroupID = source.GroupID,
-            target.IsBundle = source.IsBundle,
-            target.Unit = source.Unit,
-            target.Discount = source.Discount,
-            target.Retail_PriceAutoCalculate = source.Retail_PriceAutoCalculate,
-            target.Taxable = source.Taxable,
-            target.GSAPrice_AutoCalculate = source.GSAPrice_AutoCalculate
-
-    -- Insert New Rows
-    WHEN NOT MATCHED BY TARGET THEN
-        INSERT (
-                GSAPrice,
-                Price,
-                ContractID,
-                Vendor,
-                VendorPartNumber,
-                VendorPartNumberStripped,
-                Description,
-                Cost, -- TODO: Confirm Cost Field
-                Notes,
-                CLIN,
-                ContractNumber,
-                StartDate,
-                DateCreated,
-                EndDate,
-                ImageUrl,
-                Weight,
-                Retail_Price,
-                Show_On_Storesite,
-                EtilizeProductID,
-                ParentCategoryID,
-                CategoryID,
-                ProductName,
-                Dist_ID,
-                Dist_PartNumber,
-                Status,
-                GroupID,
-                IsBundle,
-                Unit,
-                Discount,
-                Retail_PriceAutoCalculate,
-                Taxable,
-                GSAPrice_AutoCalculate
+    INSERT INTO [192.168.80.162].[wwcp].[dbo].[ContractItem] (
+            GSAPrice,
+            Price,
+            ContractID,
+            Vendor,
+            VendorPartNumber,
+            VendorPartNumberStripped,
+            Description,
+            Cost, -- TODO: Confirm Cost Field
+            Notes,
+            CLIN,
+            ContractNumber,
+            StartDate,
+            DateCreated,
+            EndDate,
+            ImageUrl,
+            Weight,
+            Retail_Price,
+            Show_On_Storesite,
+            EtilizeProductID,
+            ParentCategoryID,
+            CategoryID,
+            ProductName,
+            Dist_ID,
+            Dist_PartNumber,
+            Status,
+            GroupID,
+            IsBundle,
+            Unit,
+            Discount,
+            Retail_PriceAutoCalculate,
+            Taxable,
+            GSAPrice_AutoCalculate
+        )
+    SELECT (
+            GSAPrice,
+            Price,
+            @DestinationContractId,
+            Vendor,
+            VendorPartNumber,
+            VendorPartNumberStripped,
+            Description,
+            Cost, -- TODO: Confirm Cost Field
+            Notes,
+            CLIN,
+            @ContractNumber,
+            StartDate,
+            DateCreated, -- Created Date
+            EndDate,
+            ImageURL,
+            Weight,
+            Retail_Price,
+            Show_On_Storesite,
+            EtilizeProductID,
+            ParentCategoryID,
+            CategoryID,
+            ProductName,
+            Dist_ID,
+            Dist_PartNumber,
+            Status, -- Status is 0
+            GroupID,
+            IsBundle,
+            Unit,
+            Discount,
+            Retail_PriceAutoCalculate,
+            Taxable,
+            GSAPrice_AutoCalculate
             )
-        VALUES (
-                source.GSAPrice,
-                source.Price,
-                @DestinationContractId,
-                source.Vendor,
-                source.VendorPartNumber,
-                source.VendorPartNumberStripped,
-                source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
-                source.Notes,
-                source.CLIN,
-                @ContractNumber,
-                source.StartDate,
-                source.DateCreated, -- Created Date
-                source.EndDate,
-                source.ImageURL,
-                source.Weight,
-                source.Retail_Price,
-                source.Show_On_Storesite,
-                source.EtilizeProductID,
-                source.ParentCategoryID,
-                source.CategoryID,
-                source.ProductName,
-                source.Dist_ID,
-                source.Dist_PartNumber,
-                source.Status, -- Status is 0
-                source.GroupID,
-                source.IsBundle,
-                source.Unit,
-                source.Discount,
-                source.Retail_PriceAutoCalculate,
-                source.Taxable,
-                source.GSAPrice_AutoCalculate
-                );
+    FROM [wwcp_pricing].[dbo].[ContractItem_temp]
+    WHERE ContractID = @DestinationContractId
 
 END TRY
 BEGIN CATCH
