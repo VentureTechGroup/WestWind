@@ -199,8 +199,7 @@ BEGIN TRY
     SET @PriceRuleName = '';
 
 
-    INSERT INTO [192.168.80.162].[wwcp].[dbo].[ContractItem] (
-            GSAPrice,
+    INSERT INTO [192.168.80.162].[wwcp].[dbo].[ContractItem] (GSAPrice,
             Price,
             ContractID,
             Vendor,
@@ -231,8 +230,7 @@ BEGIN TRY
             Discount,
             Retail_PriceAutoCalculate,
             Taxable,
-            GSAPrice_AutoCalculate
-        )
+            GSAPrice_AutoCalculate)
     SELECT  GSAPrice,
             Price,
             @DestinationContractId,
