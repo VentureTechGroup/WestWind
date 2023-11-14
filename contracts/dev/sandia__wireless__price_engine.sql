@@ -50,6 +50,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -95,7 +96,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -149,7 +150,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -166,7 +167,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -208,6 +209,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -248,7 +250,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -302,7 +304,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -319,7 +321,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -347,7 +349,7 @@ END CATCH
   END PRICE RULE TWO
 **/
 
-    
+
 /** PRICE RULE THREE **/
 BEGIN TRY
 --     DECLARE @PriceRuleDiscount AS FLOAT;
@@ -362,6 +364,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -402,7 +405,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -456,7 +459,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -473,7 +476,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -515,6 +518,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -555,7 +559,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -609,7 +613,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -626,7 +630,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -669,6 +673,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -709,7 +714,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -763,7 +768,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -780,7 +785,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -821,6 +826,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -861,7 +867,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -915,7 +921,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -932,7 +938,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -974,6 +980,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -1014,7 +1021,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -1068,7 +1075,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -1085,7 +1092,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -1127,6 +1134,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -1167,7 +1175,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -1221,7 +1229,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -1238,7 +1246,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -1280,6 +1288,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -1320,7 +1329,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -1374,7 +1383,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -1391,7 +1400,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -1433,6 +1442,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -1473,7 +1483,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -1527,7 +1537,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -1544,7 +1554,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -1585,6 +1595,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -1625,7 +1636,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -1679,7 +1690,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -1696,7 +1707,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -1737,6 +1748,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -1777,7 +1789,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -1831,7 +1843,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -1848,7 +1860,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -1889,6 +1901,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -1929,7 +1942,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -1983,7 +1996,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -2000,7 +2013,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -2041,6 +2054,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -2081,7 +2095,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -2135,7 +2149,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -2152,7 +2166,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -2194,6 +2208,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -2234,7 +2249,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -2288,7 +2303,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -2305,7 +2320,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -2347,6 +2362,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -2387,7 +2403,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -2441,7 +2457,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -2458,7 +2474,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -2499,6 +2515,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -2539,7 +2556,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -2593,7 +2610,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -2610,7 +2627,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -2651,6 +2668,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -2691,7 +2709,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -2745,7 +2763,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -2762,7 +2780,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -2804,6 +2822,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -2844,7 +2863,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -2898,7 +2917,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -2915,7 +2934,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -2956,6 +2975,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -2996,7 +3016,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -3050,7 +3070,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -3067,7 +3087,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -3108,6 +3128,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -3148,7 +3169,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -3202,7 +3223,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -3219,7 +3240,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -3260,6 +3281,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -3300,7 +3322,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -3354,7 +3376,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -3371,7 +3393,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -3413,6 +3435,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -3453,7 +3476,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -3507,7 +3530,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -3524,7 +3547,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -3565,6 +3588,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -3605,7 +3629,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -3659,7 +3683,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -3676,7 +3700,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -3717,6 +3741,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -3757,7 +3782,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -3811,7 +3836,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -3828,7 +3853,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -3869,6 +3894,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -3909,7 +3935,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -3963,7 +3989,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -3980,7 +4006,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -4022,6 +4048,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -4062,7 +4089,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -4116,7 +4143,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -4133,7 +4160,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -4175,6 +4202,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -4215,7 +4243,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -4269,7 +4297,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -4286,7 +4314,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -4312,7 +4340,7 @@ END CATCH
 /**
   END PRICE RULE TEN
 **/
-            
+
 
 
     /** PRICE RULE TEN **/
@@ -4329,6 +4357,7 @@ BEGIN TRY
     USING (
         SELECT
     price_cat.Cost,
+    master_cat.Retail_Price,
     master_cat.Retail_Price * (1-@PriceRuleDiscount) as discounted_price, -- This Is Where The Discount Is Applied To price_cat.Price
     master_cat.Vendor_Name,
     master_cat.Vendor_Part_Number,
@@ -4369,7 +4398,7 @@ BEGIN TRY
             target.EndDate = @ContractEndDate,
             target.ImageUrl = source.ImageURL,
             target.Weight = source.Weight,
-            target.Retail_Price = source.discounted_price, -- References Discounted/Calculated Price
+            target.Retail_Price = source.Retail_Price, -- References Discounted/Calculated Price
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
@@ -4423,7 +4452,7 @@ BEGIN TRY
                 GSAPrice_AutoCalculate
             )
         VALUES (
-                
+
                 source.discounted_price,
                 source.discounted_price,
                 @DestinationContractId,
@@ -4440,7 +4469,7 @@ BEGIN TRY
                 @ContractEndDate,
                 source.ImageURL,
                 source.Weight,
-                source.discounted_price,
+                source.Retail_Price,
                 1,
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
@@ -4466,7 +4495,7 @@ END CATCH
 /**
   END PRICE RULE TEN
 **/
-           
+
 
 /*
 *
