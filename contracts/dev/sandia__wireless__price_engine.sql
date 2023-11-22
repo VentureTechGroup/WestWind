@@ -4496,6 +4496,18 @@ END CATCH
   END PRICE RULE TEN
 **/
 
+    
+-- Remove All $0 or Null Prices
+DELETE FROM [wwcp_pricing].[dbo].[ContractItem_temp]
+WHERE Price <= 0 
+OR Price IS NULL;
+
+-- Ensure Price Always Has At Least 5% Gross Margin 
+UPDATE [wwcp_pricing].[dbo].[ContractItem_temp]
+SET Price = Cost / 0.95
+WHERE ((Price - Cost) / Price) * 100 < 5;
+
+
 
 /*
 *
