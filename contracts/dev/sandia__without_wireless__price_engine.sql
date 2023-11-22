@@ -77,6 +77,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -238,6 +239,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -399,6 +401,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -560,6 +563,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -722,6 +726,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -882,6 +887,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -1043,6 +1049,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -1204,6 +1211,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -1365,6 +1373,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -1526,6 +1535,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -1686,6 +1696,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -1846,6 +1857,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -2006,6 +2018,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -2166,6 +2179,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -2327,6 +2341,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -2488,6 +2503,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -2648,6 +2664,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -2808,6 +2825,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -2969,6 +2987,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -3129,6 +3148,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -3289,6 +3309,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -3449,6 +3470,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -3610,6 +3632,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -3770,6 +3793,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -3930,6 +3954,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -4090,6 +4115,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -4251,6 +4277,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -4412,6 +4439,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -4574,6 +4602,7 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -4694,6 +4723,16 @@ END CATCH
 /**
   END PRICE RULE TEN
 **/
+
+-- Remove All $0 or Null Prices
+DELETE FROM [wwcp_pricing].[dbo].[ContractItem_temp]
+WHERE Price <= 0 
+OR Price IS NULL;
+
+-- Ensure Price Always Has At Least 5% Gross Margin 
+UPDATE [wwcp_pricing].[dbo].[ContractItem_temp]
+SET Price = Cost / 0.95
+WHERE ((Price - Cost) / Price) * 100 < 5;
 
 
 /*
