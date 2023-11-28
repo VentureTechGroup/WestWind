@@ -5315,25 +5315,25 @@ SET Price = Cost / 0.95
 WHERE ((Price - Cost) / Price) * 100 < 5;
 
 -- Double Remove The Wireless Keywords
-DELETE [wwcp_pricing].[dbo].[ContractItem_temp] FROM
+DELETE FROM [wwcp_pricing].[dbo].[ContractItem_temp]
 WHERE (
-            Description LIKE '%BLUETOOTH%'
-            OR Description LIKE '%WI-FI%'
-            OR Description LIKE '%WIFI%'
-            OR Description LIKE '%WIRELESS%'
-            OR Description LIKE '%LTE%'
-            OR Description LIKE '%REFURBISHED%'
-            OR Description LIKE '%IEEE 802.11%'
-        )
-        AND (
-            ProductName LIKE '%BLUETOOTH%'
-            OR ProductName LIKE '%WI-FI%'
-            OR ProductName LIKE '%WIFI%'
-            OR ProductName LIKE '%WIRELESS%'
-            OR ProductName LIKE '%LTE%'
-            OR ProductName LIKE '%REFURBISHED%'
-            OR ProductName LIKE '%IEEE 802.11%'
-        );
+        Description LIKE '%BLUETOOTH%'
+        OR Description LIKE '%WI-FI%'
+        OR Description LIKE '%WIFI%'
+        OR Description LIKE '%WIRELESS%'
+        OR Description LIKE '%LTE%'
+        OR Description LIKE '%REFURBISHED%'
+        OR Description LIKE '%IEEE 802.11%'
+    )
+    AND (
+        ProductName LIKE '%BLUETOOTH%'
+        OR ProductName LIKE '%WI-FI%'
+        OR ProductName LIKE '%WIFI%'
+        OR ProductName LIKE '%WIRELESS%'
+        OR ProductName LIKE '%LTE%'
+        OR ProductName LIKE '%REFURBISHED%'
+        OR ProductName LIKE '%IEEE 802.11%'
+    );
 
 /*
 *
