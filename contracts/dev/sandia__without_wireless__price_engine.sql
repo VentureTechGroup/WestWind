@@ -115,7 +115,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -185,7 +185,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -297,7 +297,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -367,7 +367,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -479,7 +479,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -549,7 +549,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -661,7 +661,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -731,7 +731,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -844,7 +844,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -914,7 +914,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -1025,7 +1025,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -1095,7 +1095,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -1207,7 +1207,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -1277,7 +1277,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -1389,7 +1389,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -1459,7 +1459,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -1571,7 +1571,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -1641,7 +1641,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -1753,7 +1753,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -1823,7 +1823,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -1934,7 +1934,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -2004,7 +2004,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -2115,7 +2115,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -2185,7 +2185,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -2296,7 +2296,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -2366,7 +2366,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -2477,7 +2477,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -2547,7 +2547,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -2659,7 +2659,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -2729,7 +2729,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -2841,7 +2841,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -2911,7 +2911,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -3022,7 +3022,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -3092,7 +3092,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -3203,7 +3203,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -3273,7 +3273,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -3385,7 +3385,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -3455,7 +3455,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -3566,7 +3566,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -3636,7 +3636,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -3747,7 +3747,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -3817,7 +3817,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -3928,7 +3928,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -3998,7 +3998,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -4110,7 +4110,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -4180,7 +4180,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -4291,7 +4291,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -4361,7 +4361,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -4472,7 +4472,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -4542,7 +4542,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -4653,7 +4653,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -4723,7 +4723,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -4835,7 +4835,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -4905,7 +4905,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -5017,7 +5017,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -5087,7 +5087,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -5200,7 +5200,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -5270,7 +5270,7 @@ BEGIN TRY
                 source.Description,
                 source.Cost, -- TODO: Confirm Cost Field
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -5315,7 +5315,7 @@ SET Price = Cost / 0.95
 WHERE ((Price - Cost) / Price) * 100 < 5;
 
 -- Double Remove The Wireless Keywords
-DELETE [wwcp_pricing].[dbo].[ContractItem_temp] FROM 
+DELETE [wwcp_pricing].[dbo].[ContractItem_temp] FROM
 WHERE (
             Description LIKE '%BLUETOOTH%'
             OR Description LIKE '%WI-FI%'
