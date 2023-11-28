@@ -76,6 +76,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -83,6 +85,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -90,6 +94,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -252,6 +258,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -259,6 +267,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -266,6 +276,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -428,6 +440,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -435,6 +449,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -442,6 +458,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -604,6 +622,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -611,6 +631,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -618,6 +640,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -781,6 +805,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -788,6 +814,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -795,6 +823,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -956,6 +986,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -963,6 +995,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -970,6 +1004,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -1132,6 +1168,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -1139,6 +1177,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -1146,6 +1186,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -1308,6 +1350,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -1315,6 +1359,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -1322,6 +1368,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -1484,6 +1532,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -1491,6 +1541,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -1498,6 +1550,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -1660,6 +1714,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -1667,6 +1723,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -1674,6 +1732,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -1835,6 +1895,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -1842,6 +1904,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -1849,6 +1913,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -2010,6 +2076,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -2017,6 +2085,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -2024,6 +2094,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -2185,6 +2257,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -2192,6 +2266,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -2199,6 +2275,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -2360,6 +2438,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -2367,6 +2447,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -2374,6 +2456,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -2536,6 +2620,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -2543,6 +2629,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -2550,6 +2638,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -2712,6 +2802,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -2719,6 +2811,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -2726,6 +2820,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -2887,6 +2983,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -2894,6 +2992,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -2901,6 +3001,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -3062,6 +3164,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -3069,6 +3173,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -3076,6 +3182,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -3238,6 +3346,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -3245,6 +3355,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -3252,6 +3364,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -3413,6 +3527,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -3420,6 +3536,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -3427,6 +3545,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -3588,6 +3708,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -3595,6 +3717,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -3602,6 +3726,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -3763,6 +3889,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -3770,6 +3898,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -3777,6 +3907,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -3939,6 +4071,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -3946,6 +4080,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -3953,6 +4089,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -4114,6 +4252,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -4121,6 +4261,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -4128,6 +4270,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -4289,6 +4433,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -4296,6 +4442,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -4303,6 +4451,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -4464,6 +4614,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -4471,6 +4623,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -4478,6 +4632,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -4640,6 +4796,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -4647,6 +4805,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -4654,6 +4814,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -4816,6 +4978,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -4823,6 +4987,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -4830,6 +4996,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -4993,6 +5161,8 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+            OR master_cat.search NOT LIKE '%REFURBISHED%'
+            OR master_cat.search NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.Description NOT LIKE '%BLUETOOTH%'
@@ -5000,6 +5170,8 @@ BEGIN TRY
             OR master_cat.Description NOT LIKE '%WIFI%'
             OR master_cat.Description NOT LIKE '%WIRELESS%'
             OR master_cat.Description NOT LIKE '%LTE%'
+            OR master_cat.Description NOT LIKE '%REFURBISHED%'
+            OR master_cat.Description NOT LIKE '%IEEE 802.11%'
         )
         AND (
             master_cat.ProductName NOT LIKE '%BLUETOOTH%'
@@ -5007,6 +5179,8 @@ BEGIN TRY
             OR master_cat.ProductName NOT LIKE '%WIFI%'
             OR master_cat.ProductName NOT LIKE '%WIRELESS%'
             OR master_cat.ProductName NOT LIKE '%LTE%'
+            OR master_cat.ProductName NOT LIKE '%REFURBISHED%'
+            OR master_cat.ProductName NOT LIKE '%IEEE 802.11%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -5132,10 +5306,10 @@ END CATCH
 
 -- Remove All $0 or Null Prices
 DELETE FROM [wwcp_pricing].[dbo].[ContractItem_temp]
-WHERE Price <= 0 
+WHERE Price <= 0
 OR Price IS NULL;
 
--- Ensure Price Always Has At Least 5% Gross Margin 
+-- Ensure Price Always Has At Least 5% Gross Margin
 UPDATE [wwcp_pricing].[dbo].[ContractItem_temp]
 SET Price = Cost / 0.95
 WHERE ((Price - Cost) / Price) * 100 < 5;
