@@ -70,33 +70,6 @@ BEGIN TRY
         )
         AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862')
         AND master_cat.search LIKE '% SBUY %'
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -252,33 +225,6 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4830') OR master_cat.etilizeParentCatId IN ('4830')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search NOT LIKE '% SBUY %'
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -434,33 +380,7 @@ BEGIN TRY
     FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
-        WHERE (master_cat.etilizeCatId IN ('10025') OR master_cat.etilizeParentCatId IN ('10025')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search NOT LIKE '% SBUY %' AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
+        WHERE (master_cat.etilizeCatId IN ('10025') OR master_cat.etilizeParentCatId IN ('10025')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search NOT LIKE '% SBUY %'
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -616,33 +536,6 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('10025') OR master_cat.etilizeParentCatId IN ('10025')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search LIKE '% SBUY %'
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -799,33 +692,6 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId  IN ('4876','10285','11925','4830') OR master_cat.etilizeParentCatId  IN ('4876','10285','11925','4830')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search NOT LIKE '% SBUY %'
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -980,34 +846,7 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4876','10285','11925','4830') OR master_cat.etilizeParentCatId IN ('4876','10285','11925','4830')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search LIKE '% SBUY %'
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
-        AND price_cat.Dist_ID = 20 -- Synnex
+          AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -1162,33 +1001,6 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4871') OR master_cat.etilizeParentCatId IN ('4871')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search NOT LIKE '% SBUY %'
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -1344,33 +1156,6 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4871') OR master_cat.etilizeParentCatId IN ('4871')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search LIKE '% SBUY %'
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -1526,33 +1311,6 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4872') OR master_cat.etilizeParentCatId IN ('4872')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search NOT LIKE '% SBUY %'
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -1708,33 +1466,6 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4872') OR master_cat.etilizeParentCatId IN ('4872')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search LIKE '% SBUY %'
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -1889,33 +1620,6 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4831','10165') OR master_cat.etilizeParentCatId IN ('4831','10165')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search NOT LIKE '% SBUY %'
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -2070,33 +1774,6 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4805','4807','4810','4816','4820','4821','4822','10153','10294','10914','11655') OR master_cat.etilizeParentCatId IN ('4805','4807','4810','4816','4820','4821','4822','10153','10294','10914','11655')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search NOT LIKE '% SBUY %'
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -2251,33 +1928,6 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4813','4823','10040','10251','10291','10931','11099','11158','11164','11748','11752') OR master_cat.etilizeParentCatId IN ('4813','4823','10040','10251','10291','10931','11099','11158','11164','11748','11752')) AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862') AND master_cat.search NOT LIKE '% SBUY %'
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -2432,33 +2082,6 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4813','4823','10040','10251','10291','10931','11099','11158','11164','11748','11752') OR master_cat.etilizeParentCatId IN ('4813','4823','10040','10251','10291','10931','11099','11158','11164','11748','11752')) AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862') AND master_cat.search LIKE '% SBUY %'
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -2614,33 +2237,6 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862') AND master_cat.Description LIKE '%Aruba%'
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -2796,33 +2392,6 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4873','5148','10154','10247','10282','11099','11748') OR master_cat.etilizeParentCatId IN ('4873','5148','10154','10247','10282','11099','11748')) AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862')
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -2977,33 +2546,6 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4907','5167','10061','1010','10154','10465','10468','10692','10808','10931','11493','11611') OR master_cat.etilizeParentCatId IN ('4907','5167','10061','1010','10154','10465','10468','10692','10808','10931','11493','11611')) AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862','1063888','1063891','1063976','1063979','1042796','1043456','1046484')
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -3158,34 +2700,7 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4907','5167','10061','1010','10154','10465','10468','10692','10808','10931','11493','11611') OR master_cat.etilizeParentCatId IN ('4907','5167','10061','1010','10154','10465','10468','10692','10808','10931','11493','11611')) AND master_cat.etilizeMfgId IN ('102251','101210','10237','10220','10406','10418','102304','10563','10353','1020570','1030062','10227','1036611','10322','10301','10227','10943','1023145','1026045','1029114','1032356','1035747','1044946','1045024','1046866','1020376','1029553','1030008','1025881','1036136','1039004','101950','1034465','1026916')
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
-        AND price_cat.Dist_ID = 20 -- Synnex
+          AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -3340,34 +2855,7 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('5181') OR master_cat.etilizeParentCatId IN ('5181')) AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862','1063888','1063891','1063976','1063979','1042796','1043456','1046484')
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
-        AND price_cat.Dist_ID = 20 -- Synnex
+AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -3521,34 +3009,7 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('5181') OR master_cat.etilizeParentCatId IN ('5181')) AND master_cat.etilizeMfgId IN ('102251','101210','10237','10220','10406','10418','102304','10563','10353','1020570','1030062','10227','1036611','10322','10301','10227','10943','1023145','1026045','1029114','1032356','1035747','1044946','1045024','1046866','1020376','1029553','1030008','1025881','1036136','1039004','101950','1034465','1026916')
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
-        AND price_cat.Dist_ID = 20 -- Synnex
+AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -3702,34 +3163,7 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('11040') OR master_cat.etilizeParentCatId IN ('11040')) AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862','1063888','1063891','1063976','1063979','1042796','1043456','1046484')
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
-        AND price_cat.Dist_ID = 20 -- Synnex
+AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -3883,34 +3317,7 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('11040') OR master_cat.etilizeParentCatId IN ('11040')) AND master_cat.etilizeMfgId IN ('102251','101210','10237','10220','10406','10418','102304','10563','10353','1020570','1030062','10227','1036611','10322','10301','10227','10943','1023145','1026045','1029114','1032356','1035747','1044946','1045024','1046866','1020376','1029553','1030008','1025881','1036136','1039004','101950','1034465','1026916')
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
-        AND price_cat.Dist_ID = 20 -- Synnex
+AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -4065,34 +3472,7 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('5160','10007','10052','10114') OR master_cat.etilizeParentCatId IN ('5160','10007','10052','10114')) AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862','1063888','1063891','1063976','1063979','1042796','1043456','1046484')
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
-        AND price_cat.Dist_ID = 20 -- Synnex
+AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -4246,34 +3626,7 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('5153') OR master_cat.etilizeParentCatId IN ('5153')) AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862','1063888','1063891','1063976','1063979','1042796','1043456','1046484')
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
-        AND price_cat.Dist_ID = 20 -- Synnex
+AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -4427,34 +3780,7 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('5153') OR master_cat.etilizeParentCatId IN ('5153')) AND master_cat.etilizeMfgId IN ('102251','101210','10237','10220','10406','10418','102304','10563','10353','1020570','1030062','10227','1036611','10322','10301','10227','10943','1023145','1026045','1029114','1032356','1035747','1044946','1045024','1046866','1020376','1029553','1030008','1025881','1036136','1039004','101950','1034465','1026916')
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
-        AND price_cat.Dist_ID = 20 -- Synnex
+AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -4608,34 +3934,7 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4822') OR master_cat.etilizeParentCatId IN ('4822')) AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862','1063888','1063891','1063976','1063979','1042796','1043456','1046484')
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
-        AND price_cat.Dist_ID = 20 -- Synnex
+AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -4789,35 +4088,7 @@ BEGIN TRY
     FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
-        WHERE (master_cat.etilizeCatId IN ('10015') OR master_cat.etilizeParentCatId IN ('10015')) AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862','1063888','1063891','1063976','1063979','1042796','1043456','1046484')
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
-        AND price_cat.Dist_ID = 20 -- Synnex
+        WHERE (master_cat.etilizeCatId IN ('10015') OR master_cat.etilizeParentCatId IN ('10015')) AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862','1063888','1063891','1063976','1063979','1042796','1043456','1046484')AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -4971,35 +4242,7 @@ BEGIN TRY
     FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
-        WHERE (master_cat.etilizeCatId IN ('4911','4912','5123','10167','10333','10663','10910','11757') OR master_cat.etilizeParentCatId IN ('4911','4912','5123','10167','10333','10663','10910','11757')) AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862','1063888','1063891','1063976','1063979','1042796','1043456','1046484')
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
-        AND price_cat.Dist_ID = 20 -- Synnex
+        WHERE (master_cat.etilizeCatId IN ('4911','4912','5123','10167','10333','10663','10910','11757') OR master_cat.etilizeParentCatId IN ('4911','4912','5123','10167','10333','10663','10910','11757')) AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862','1063888','1063891','1063976','1063979','1042796','1043456','1046484')AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -5155,33 +4398,6 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4911','4912','5123','10167','10333','10663','10910','11757') OR master_cat.etilizeParentCatId IN ('4911','4912','5123','10167','10333','10663','10910','11757')) AND master_cat.etilizeMfgId IN ('102251','101210','10237','10220','10406','10418','102304','10563','10353','1020570','1030062','10227','1036611','10322','10301','10227','10943','1023145','1026045','1029114','1032356','1035747','1044946','1045024','1046866','1020376','1029553','1030008','1025881','1036136','1039004','101950','1034465','1026916')
-        AND (
-            master_cat.search NOT LIKE '%BLUETOOTH%'
-            AND master_cat.search NOT LIKE '%WI-FI%'
-            AND master_cat.search NOT LIKE '%WIFI%'
-            AND master_cat.search NOT LIKE '%WIRELESS%'
-            AND master_cat.search NOT LIKE '%LTE%'
-            AND master_cat.search NOT LIKE '%REFURBISHED%'
-            AND master_cat.search NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.Description NOT LIKE '%BLUETOOTH%'
-            AND master_cat.Description NOT LIKE '%WI-FI%'
-            AND master_cat.Description NOT LIKE '%WIFI%'
-            AND master_cat.Description NOT LIKE '%WIRELESS%'
-            AND master_cat.Description NOT LIKE '%LTE%'
-            AND master_cat.Description NOT LIKE '%REFURBISHED%'
-            AND master_cat.Description NOT LIKE '%IEEE 802.11%'
-        )
-        AND (
-            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
-            AND master_cat.ProductName NOT LIKE '%WI-FI%'
-            AND master_cat.ProductName NOT LIKE '%WIFI%'
-            AND master_cat.ProductName NOT LIKE '%WIRELESS%'
-            AND master_cat.ProductName NOT LIKE '%LTE%'
-            AND master_cat.ProductName NOT LIKE '%REFURBISHED%'
-            AND master_cat.ProductName NOT LIKE '%IEEE 802.11%'
-        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -5314,30 +4530,32 @@ UPDATE [wwcp_pricing].[dbo].[ContractItem_temp]
 SET Price = Cost / 0.95
 WHERE ((Price - Cost) / Price) * 100 < 5;
 
--- Double Remove The Wireless Keywords
+-- Remove The Wireless Keywords: Description
 DELETE FROM [wwcp_pricing].[dbo].[ContractItem_temp]
 WHERE (
-            Description LIKE '%BLUETOOTH%'
-            OR Description LIKE '%WI-FI%'
-            OR Description LIKE '%WIFI%'
-            OR Description LIKE '%WIRELESS%'
-            OR Description LIKE '%LTE%'
-            OR Description LIKE '%REFURBISHED%'
-            OR Description LIKE '%IEEE 802.11%'
+        Description LIKE '%BLUETOOTH%'
+        OR Description LIKE '%WI-FI%'
+        OR Description LIKE '%WIFI%'
+        OR Description LIKE '%WIRELESS%'
+        OR Description LIKE '%LTE%'
+        OR Description LIKE '%REFURBISHED%'
+        OR Description LIKE '%IEEE 802.11%'
         )
-        OR (
-            ProductName LIKE '%BLUETOOTH%'
-            OR ProductName LIKE '%WI-FI%'
-            OR ProductName LIKE '%WIFI%'
-            OR ProductName LIKE '%WIRELESS%'
-            OR ProductName LIKE '%LTE%'
-            OR ProductName LIKE '%REFURBISHED%'
-            OR ProductName LIKE '%IEEE 802.11%'
-        );
 
+-- Remove The Wireless Keywords: ProductName
+DELETE FROM [wwcp_pricing].[dbo].[ContractItem_temp]
+WHERE (
+        ProductName LIKE '%BLUETOOTH%'
+        OR ProductName LIKE '%WI-FI%'
+        OR ProductName LIKE '%WIFI%'
+        OR ProductName LIKE '%WIRELESS%'
+        OR ProductName LIKE '%LTE%'
+        OR ProductName LIKE '%REFURBISHED%'
+        OR ProductName LIKE '%IEEE 802.11%'
+        );
 /*
 *
-* MERGE ContractItem_temp into ContractItem
+* MERGE CntractItem_temp into ContractItem
 */
 
 BEGIN TRY
@@ -5420,5 +4638,3 @@ END TRY
 BEGIN CATCH
     PRINT 'There was an error conducting the MERGE Statement from ContractItem_temp to ContractItems. No ContractItems created.';
 END CATCH
-
-
