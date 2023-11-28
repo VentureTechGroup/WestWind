@@ -91,7 +91,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -124,7 +124,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -159,9 +159,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -246,7 +246,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -279,7 +279,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -314,9 +314,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -383,7 +383,7 @@ BEGIN TRY
     FROM [wwcp_pricing].[dbo].[PriceCatalog_temp] as price_cat
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
-        WHERE (master_cat.etilizeCatId IN ('10025') OR master_cat.etilizeParentCatId IN ('10025')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search NOT LIKE '% SBUY %' 
+        WHERE (master_cat.etilizeCatId IN ('10025') OR master_cat.etilizeParentCatId IN ('10025')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search NOT LIKE '% SBUY %'
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -402,7 +402,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -435,7 +435,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -470,9 +470,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -557,7 +557,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -590,7 +590,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -625,9 +625,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -713,7 +713,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -746,7 +746,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -781,9 +781,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -867,7 +867,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -900,7 +900,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -935,9 +935,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -1022,7 +1022,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -1055,7 +1055,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -1090,9 +1090,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -1177,7 +1177,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -1210,7 +1210,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -1245,9 +1245,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -1332,7 +1332,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -1365,7 +1365,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -1400,9 +1400,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -1487,7 +1487,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -1520,7 +1520,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -1555,9 +1555,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -1641,7 +1641,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -1674,7 +1674,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -1709,9 +1709,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -1795,7 +1795,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -1828,7 +1828,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -1863,9 +1863,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -1949,7 +1949,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -1982,7 +1982,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -2017,9 +2017,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -2103,7 +2103,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -2136,7 +2136,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -2171,9 +2171,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -2258,7 +2258,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -2291,7 +2291,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -2326,9 +2326,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -2413,7 +2413,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -2446,7 +2446,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -2481,9 +2481,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -2567,7 +2567,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -2600,7 +2600,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -2635,9 +2635,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -2721,7 +2721,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -2754,7 +2754,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -2789,9 +2789,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -2876,7 +2876,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -2909,7 +2909,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -2944,9 +2944,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -3030,7 +3030,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -3063,7 +3063,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -3098,9 +3098,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -3184,7 +3184,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -3217,7 +3217,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -3252,9 +3252,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -3338,7 +3338,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -3371,7 +3371,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -3406,9 +3406,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -3493,7 +3493,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -3526,7 +3526,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -3561,9 +3561,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -3647,7 +3647,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -3680,7 +3680,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -3715,9 +3715,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -3801,7 +3801,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -3834,7 +3834,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -3869,9 +3869,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -3955,7 +3955,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -3988,7 +3988,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -4023,9 +4023,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -4110,7 +4110,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -4143,7 +4143,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -4178,9 +4178,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -4265,7 +4265,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -4298,7 +4298,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -4333,9 +4333,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -4421,7 +4421,7 @@ BEGIN TRY
             target.Description = source.Description,
             target.Cost = source.Cost, -- TODO Review Cost Field
             target.Notes = + 'Updated by the Westwind Price Engine', -- Added note that it was created by the price engine
-            target.CLIN = NULL,
+            target.CLIN = '',
             target.ContractNumber = @ContractNumber, -- References @ContractNumber
             target.StartDate = @ContractStartDate,
             target.EndDate = @ContractEndDate,
@@ -4454,7 +4454,7 @@ BEGIN TRY
                 VendorPartNumber,
                 VendorPartNumberStripped,
                 Description,
-                Cost, -- TODO: Confirm Cost Field
+                Cost,
                 Notes,
                 CLIN,
                 ContractNumber,
@@ -4489,9 +4489,9 @@ BEGIN TRY
                 source.Vendor_Part_Number,
                 source.Vendor_Part_Number_Stripped,
                 source.Description,
-                source.Cost, -- TODO: Confirm Cost Field
+                source.Cost,
                 NULL,
-                NULL,
+                '',
                 @ContractNumber,
                 @ContractStartDate,
                 @ContractStartDate, -- Created Date
@@ -4525,13 +4525,13 @@ END CATCH
   END PRICE RULE TEN
 **/
 
-    
+
 -- Remove All $0 or Null Prices
 DELETE FROM [wwcp_pricing].[dbo].[ContractItem_temp]
-WHERE Price <= 0 
+WHERE Price <= 0
 OR Price IS NULL;
 
--- Ensure Price Always Has At Least 5% Gross Margin 
+-- Ensure Price Always Has At Least 5% Gross Margin
 UPDATE [wwcp_pricing].[dbo].[ContractItem_temp]
 SET Price = Cost / 0.95
 WHERE ((Price - Cost) / Price) * 100 < 5;
@@ -4559,7 +4559,7 @@ INSERT INTO [192.168.80.162].[wwcp].[dbo].[ContractItem] (GSAPrice,
                                                           VendorPartNumber,
                                                           VendorPartNumberStripped,
                                                           Description,
-                                                          Cost, -- TODO: Confirm Cost Field
+                                                          Cost,
                                                           Notes,
                                                           CLIN,
                                                           ContractNumber,
@@ -4591,7 +4591,7 @@ SELECT GSAPrice,
         VendorPartNumber,
         VendorPartNumberStripped,
         Description,
-        Cost, -- TODO: Confirm Cost Field
+        Cost,
         Notes,
         CLIN,
         @ContractNumber,
