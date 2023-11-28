@@ -77,6 +77,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
+        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -238,6 +252,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -401,6 +429,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
+        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -562,6 +604,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -726,6 +782,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
+        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -886,6 +956,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -1049,6 +1133,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
+        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -1210,6 +1308,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -1373,6 +1485,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
+        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -1535,6 +1661,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
+        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -1695,6 +1835,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -1857,6 +2011,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
+        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -2018,6 +2186,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
+        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -2178,6 +2360,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -2341,6 +2537,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
+        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -2503,6 +2713,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
+        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -2664,6 +2888,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
+        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -2824,6 +3062,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -2987,6 +3239,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
+        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -3147,6 +3413,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -3309,6 +3589,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
+        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -3469,6 +3763,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -3632,6 +3940,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
+        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -3792,6 +4114,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -3954,6 +4290,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
+        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -4114,6 +4464,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -4277,6 +4641,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
+        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -4438,6 +4816,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIFI%'
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
         )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
@@ -4602,6 +4994,20 @@ BEGIN TRY
             OR master_cat.search NOT LIKE '%WIRELESS%'
             OR master_cat.search NOT LIKE '%LTE%'
         )
+        AND (
+            master_cat.Description NOT LIKE '%BLUETOOTH%'
+            OR master_cat.Description NOT LIKE '%WI-FI%'
+            OR master_cat.Description NOT LIKE '%WIFI%'
+            OR master_cat.Description NOT LIKE '%WIRELESS%'
+            OR master_cat.Description NOT LIKE '%LTE%'
+        )
+        AND (
+            master_cat.ProductName NOT LIKE '%BLUETOOTH%'
+            OR master_cat.ProductName NOT LIKE '%WI-FI%'
+            OR master_cat.ProductName NOT LIKE '%WIFI%'
+            OR master_cat.ProductName NOT LIKE '%WIRELESS%'
+            OR master_cat.ProductName NOT LIKE '%LTE%'
+        )
         AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
@@ -4734,7 +5140,6 @@ UPDATE [wwcp_pricing].[dbo].[ContractItem_temp]
 SET Price = Cost / 0.95
 WHERE ((Price - Cost) / Price) * 100 < 5;
 
-
 /*
 *
 * MERGE ContractItem_temp into ContractItem
@@ -4742,7 +5147,7 @@ WHERE ((Price - Cost) / Price) * 100 < 5;
 
 BEGIN TRY
 
-/** DELETE ContractItems created during prior runs (FILTERED to single ContractId**/
+/** DELETE ContractItems created during prior runs (FILTERED to single ContractId) **/
 DELETE FROM [192.168.80.162].[wwcp].[dbo].[ContractItem] WHERE ContractID = @DestinationContractId;
 
 SET @PriceRuleDiscount = ''; -- Set Discount Percentage Here
