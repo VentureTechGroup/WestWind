@@ -4557,8 +4557,12 @@ WHERE (
 -- Remove Laptops With "Chrome" in the Description or ProductName
 DELETE FROM [wwcp_pricing].[dbo].[ContractItem_temp]
 WHERE (CategoryID IN ('4876','10285','11925','4830') OR ParentCategoryID IN ('4876','10285','11925','4830'))
-AND Description LIKE '%CHROME%'
 AND ProductName LIKE '%CHROME%'
+
+DELETE FROM [wwcp_pricing].[dbo].[ContractItem_temp]
+WHERE (CategoryID IN ('4876','10285','11925','4830') OR ParentCategoryID IN ('4876','10285','11925','4830'))
+AND Description LIKE '%CHROME%'
+
 
 
 /*
