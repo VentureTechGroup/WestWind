@@ -846,7 +846,7 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (master_cat.etilizeCatId IN ('4876','10285','11925','4830') OR master_cat.etilizeParentCatId IN ('4876','10285','11925','4830')) AND master_cat.etilizeMfgId IN ('1063888','1063891','1063976','1063979','1042796','1043456','1046484') AND master_cat.search LIKE '% SBUY %'
-          AND price_cat.Dist_ID = 20 -- Synnex
+        AND price_cat.Dist_ID = 20 -- Synnex
     ) AS source
     ON (target.Dist_ID = source.Dist_ID) -- Match ContractItem Records Using DIST_ID
     AND (target.Dist_PartNumber = source.Dist_Part_Number) -- AND DIST_PARTNUMBER
@@ -4553,6 +4553,14 @@ WHERE (
         OR ProductName LIKE '%REFURBISHED%'
         OR ProductName LIKE '%IEEE 802.11%'
         );
+
+-- Remove Laptops With "Chrome" in the Description or ProductName
+DELETE FROM [wwcp_pricing].[dbo].[ContractItem_temp]
+WHERE (CategoryID IN ('4876','10285','11925','4830') OR ParentCategoryID IN ('4876','10285','11925','4830'))
+AND Description NOT LIKE '%CHROME%'
+AND ProductName NOT LIKE '%CHROME%'
+
+
 /*
 *
 * MERGE CntractItem_temp into ContractItem
