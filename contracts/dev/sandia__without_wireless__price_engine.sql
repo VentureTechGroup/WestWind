@@ -3667,7 +3667,7 @@ BEGIN TRY
 /** DELETE ContractItems created during prior runs (FILTERED to single ContractId and to exclude records that have a non-null value) **/
 DELETE FROM [192.168.80.162].[wwcp].[dbo].[ContractItem]
        WHERE ContractID = @DestinationContractId 
-           AND AddedById IS NOT NULL;
+           AND AddedById IS NULL;
 
 
 SET @PriceRuleDiscount = ''; -- Set Discount Percentage Here
