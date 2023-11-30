@@ -64,8 +64,8 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (
-            master_cat.etilizeCatId IN ('10122', '10106', '10265', '5122', '5120', '10264')
-            OR master_cat.etilizeParentCatId IN ('10122', '10106', '10265', '5122', '5120', '10264')
+            master_cat.etilizeCatId IN ('10106', '5122', '5120')
+            OR master_cat.etilizeParentCatId IN ('10106', '5122', '5120')
         )
         AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862','102251','101210','10237','10220','10406','10418','102304','10563','10353','1020570','1030062','10227','1036611','10322','10301','10227','10943','1023145','1026045','1029114','1032356','1035747','1044946','1045024','1046866','1020376','1029553','1030008','1025881','1036136','1039004','101950','1034465','1026916')
         AND price_cat.Dist_ID = 20 -- Synnex
@@ -223,8 +223,8 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (
-            master_cat.etilizeCatId IN ('4958', '4900')
-            OR master_cat.etilizeParentCatId IN ('4900', '4958')
+            master_cat.etilizeCatId IN ('4958', '4900', '10122', '10265', '10264')
+            OR master_cat.etilizeParentCatId IN ('4900', '4958', '10122', '10265', '10264')
         )
         AND master_cat.etilizeMfgId IN ('1063889','1063890','1063892','1063978','1043455','1046863','1046864','1054748','1054862')
         AND price_cat.Dist_ID = 20 -- Synnex
@@ -383,8 +383,8 @@ BEGIN TRY
     JOIN [catservices].[dbo].[MasterCatalog] as master_cat
     ON price_cat.Dist_ID = master_cat.Dist_ID AND price_cat.Dist_Part_Number = master_cat.Dist_Part_Number
         WHERE (
-            master_cat.etilizeCatId IN ('4958', '4900')
-            OR master_cat.etilizeParentCatId IN ('4900', '4958')
+            master_cat.etilizeCatId IN ('4958', '4900', '10122', '10265', '10264')
+            OR master_cat.etilizeParentCatId IN ('4900', '4958', '10122', '10265', '10264')
         )
         AND master_cat.etilizeMfgId IN ('102251','101210','10237','10220','10406','10418','102304','10563','10353','1020570','1030062','10227','1036611','10322','10301','10227','10943','1023145','1026045','1029114','1032356','1035747','1044946','1045024','1046866','1020376','1029553','1030008','1025881','1036136','1039004','101950','1034465','1026916')
         AND price_cat.Dist_ID = 20 -- Synnex
