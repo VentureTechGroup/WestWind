@@ -3592,9 +3592,8 @@ DELETE FROM [wwcp_pricing].[dbo].[ContractItem_temp]
 WHERE Price <= 0
 OR Price IS NULL;
 
--- Ensure Price Always Has At Least 5% Gross Margin
-UPDATE [wwcp_pricing].[dbo].[ContractItem_temp]
-SET Price = Cost / 0.95
+-- Delete Items With Less Than A 5% Gross Margin
+DELETE FROM [wwcp_pricing].[dbo].[ContractItem_temp]
 WHERE ((Price - Cost) / Price) * 100 < 5;
 
 -- Remove The Wireless Keywords: Description
