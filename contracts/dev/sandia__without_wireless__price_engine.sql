@@ -58,7 +58,6 @@ BEGIN TRY
     master_cat.EtilizeParentCatID,
     master_cat.EtilizeCatID,
     master_cat.etilizeMfgId,
-    master_cat.etilizeMfgId,
     master_cat.ProductName,
     master_cat.Dist_ID,
     master_cat.Dist_Part_Number
