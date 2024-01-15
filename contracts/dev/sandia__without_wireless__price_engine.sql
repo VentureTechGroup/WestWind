@@ -1,4 +1,4 @@
-CATALOG/**
+/**
 *
 * WESTWIND: Sandia Price Engine (EXCLUDING Wireless)
 *
