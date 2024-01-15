@@ -3679,7 +3679,7 @@ BEGIN TRY
 */
 
 /** DELETE ContractItems created during prior runs (FILTERED to single ContractId and to exclude records that have a non-null value) **/
-DELETE FROM [192.168.80.162].[wwcp].[dbo].[ContractItem]
+DELETE FROM [10.10.10.13].[wwcp].[dbo].[ContractItem]
        WHERE ContractID = @DestinationContractId 
            AND AddedById IS NULL;
 
@@ -3688,7 +3688,7 @@ SET @PriceRuleDiscount = ''; -- Set Discount Percentage Here
 SET @PriceRuleName = '';
 
 
-INSERT INTO [192.168.80.162].[wwcp].[dbo].[ContractItem] (GSAPrice,
+INSERT INTO [10.10.10.13].[wwcp].[dbo].[ContractItem] (GSAPrice,
                                                           Price,
                                                           ContractID,
                                                           Vendor,
