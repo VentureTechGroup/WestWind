@@ -14,7 +14,7 @@ SET @DestinationContractId = 60;
 
 DECLARE @ContractNumber AS VARCHAR(100);
 SET @ContractNumber = 'SANDIA - SCMC E-CATALOG'
-    
+
 DECLARE @ContractStartDate AS DATETIME;
 SET @ContractStartDate = GETDATE();
 
@@ -57,6 +57,8 @@ BEGIN TRY
     master_cat.EtilizeProductID,
     master_cat.EtilizeParentCatID,
     master_cat.EtilizeCatID,
+    master_cat.etilizeMfgId,
+    master_cat.etilizeMfgId,
     master_cat.ProductName,
     master_cat.Dist_ID,
     master_cat.Dist_Part_Number
@@ -96,6 +98,7 @@ BEGIN TRY
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
+            target.MfgID = source.etilizeMfgId,
             target.CategoryID = source.EtilizeCatID,
             target.ProductName = source.ProductName,
             target.Dist_ID = source.Dist_ID,
@@ -133,6 +136,7 @@ BEGIN TRY
                 EtilizeProductID,
                 ParentCategoryID,
                 CategoryID,
+                MfgID,
                 ProductName,
                 Dist_ID,
                 Dist_PartNumber,
@@ -168,6 +172,7 @@ BEGIN TRY
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
                 source.EtilizeCatID,
+                source.etilizeMfgId,
                 source.ProductName,
                 source.Dist_ID,
                 source.Dist_Part_Number,
@@ -213,6 +218,7 @@ BEGIN TRY
     master_cat.EtilizeProductID,
     master_cat.EtilizeParentCatID,
     master_cat.EtilizeCatID,
+    master_cat.etilizeMfgId,
     master_cat.ProductName,
     master_cat.Dist_ID,
     master_cat.Dist_Part_Number
@@ -252,6 +258,7 @@ BEGIN TRY
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
+            target.MfgID = source.etilizeMfgId,
             target.CategoryID = source.EtilizeCatID,
             target.ProductName = source.ProductName,
             target.Dist_ID = source.Dist_ID,
@@ -289,6 +296,7 @@ BEGIN TRY
                 EtilizeProductID,
                 ParentCategoryID,
                 CategoryID,
+                MfgID,
                 ProductName,
                 Dist_ID,
                 Dist_PartNumber,
@@ -324,6 +332,7 @@ BEGIN TRY
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
                 source.EtilizeCatID,
+                source.etilizeMfgId,
                 source.ProductName,
                 source.Dist_ID,
                 source.Dist_Part_Number,
@@ -370,6 +379,7 @@ BEGIN TRY
     master_cat.EtilizeProductID,
     master_cat.EtilizeParentCatID,
     master_cat.EtilizeCatID,
+    master_cat.etilizeMfgId,
     master_cat.ProductName,
     master_cat.Dist_ID,
     master_cat.Dist_Part_Number
@@ -409,6 +419,7 @@ BEGIN TRY
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
+            target.MfgID = source.etilizeMfgId,
             target.CategoryID = source.EtilizeCatID,
             target.ProductName = source.ProductName,
             target.Dist_ID = source.Dist_ID,
@@ -446,6 +457,7 @@ BEGIN TRY
                 EtilizeProductID,
                 ParentCategoryID,
                 CategoryID,
+                MfgID,
                 ProductName,
                 Dist_ID,
                 Dist_PartNumber,
@@ -481,6 +493,7 @@ BEGIN TRY
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
                 source.EtilizeCatID,
+                source.etilizeMfgId,
                 source.ProductName,
                 source.Dist_ID,
                 source.Dist_Part_Number,
@@ -526,6 +539,7 @@ BEGIN TRY
     master_cat.EtilizeProductID,
     master_cat.EtilizeParentCatID,
     master_cat.EtilizeCatID,
+    master_cat.etilizeMfgId,
     master_cat.ProductName,
     master_cat.Dist_ID,
     master_cat.Dist_Part_Number
@@ -566,6 +580,7 @@ BEGIN TRY
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
+            target.MfgID = source.etilizeMfgId,
             target.CategoryID = source.EtilizeCatID,
             target.ProductName = source.ProductName,
             target.Dist_ID = source.Dist_ID,
@@ -603,6 +618,7 @@ BEGIN TRY
                 EtilizeProductID,
                 ParentCategoryID,
                 CategoryID,
+                MfgID,
                 ProductName,
                 Dist_ID,
                 Dist_PartNumber,
@@ -638,6 +654,7 @@ BEGIN TRY
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
                 source.EtilizeCatID,
+                source.etilizeMfgId,
                 source.ProductName,
                 source.Dist_ID,
                 source.Dist_Part_Number,
@@ -683,6 +700,7 @@ BEGIN TRY
     master_cat.EtilizeProductID,
     master_cat.EtilizeParentCatID,
     master_cat.EtilizeCatID,
+    master_cat.etilizeMfgId,
     master_cat.ProductName,
     master_cat.Dist_ID,
     master_cat.Dist_Part_Number
@@ -718,6 +736,7 @@ BEGIN TRY
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
+            target.MfgID = source.etilizeMfgId,
             target.CategoryID = source.EtilizeCatID,
             target.ProductName = source.ProductName,
             target.Dist_ID = source.Dist_ID,
@@ -755,6 +774,7 @@ BEGIN TRY
                 EtilizeProductID,
                 ParentCategoryID,
                 CategoryID,
+                MfgID,
                 ProductName,
                 Dist_ID,
                 Dist_PartNumber,
@@ -790,6 +810,7 @@ BEGIN TRY
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
                 source.EtilizeCatID,
+                source.etilizeMfgId,
                 source.ProductName,
                 source.Dist_ID,
                 source.Dist_Part_Number,
@@ -834,6 +855,7 @@ BEGIN TRY
     master_cat.EtilizeProductID,
     master_cat.EtilizeParentCatID,
     master_cat.EtilizeCatID,
+    master_cat.etilizeMfgId,
     master_cat.ProductName,
     master_cat.Dist_ID,
     master_cat.Dist_Part_Number
@@ -869,6 +891,7 @@ BEGIN TRY
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
+            target.MfgID = source.etilizeMfgId,
             target.CategoryID = source.EtilizeCatID,
             target.ProductName = source.ProductName,
             target.Dist_ID = source.Dist_ID,
@@ -906,6 +929,7 @@ BEGIN TRY
                 EtilizeProductID,
                 ParentCategoryID,
                 CategoryID,
+                MfgID,
                 ProductName,
                 Dist_ID,
                 Dist_PartNumber,
@@ -941,6 +965,7 @@ BEGIN TRY
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
                 source.EtilizeCatID,
+                source.etilizeMfgId,
                 source.ProductName,
                 source.Dist_ID,
                 source.Dist_Part_Number,
@@ -988,6 +1013,7 @@ BEGIN TRY
     master_cat.EtilizeProductID,
     master_cat.EtilizeParentCatID,
     master_cat.EtilizeCatID,
+    master_cat.etilizeMfgId,
     master_cat.ProductName,
     master_cat.Dist_ID,
     master_cat.Dist_Part_Number
@@ -1023,6 +1049,7 @@ BEGIN TRY
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
+            target.MfgID = source.etilizeMfgId,
             target.CategoryID = source.EtilizeCatID,
             target.ProductName = source.ProductName,
             target.Dist_ID = source.Dist_ID,
@@ -1060,6 +1087,7 @@ BEGIN TRY
                 EtilizeProductID,
                 ParentCategoryID,
                 CategoryID,
+                MfgID,
                 ProductName,
                 Dist_ID,
                 Dist_PartNumber,
@@ -1095,6 +1123,7 @@ BEGIN TRY
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
                 source.EtilizeCatID,
+                source.etilizeMfgId,
                 source.ProductName,
                 source.Dist_ID,
                 source.Dist_Part_Number,
@@ -1142,6 +1171,7 @@ BEGIN TRY
     master_cat.EtilizeProductID,
     master_cat.EtilizeParentCatID,
     master_cat.EtilizeCatID,
+    master_cat.etilizeMfgId,
     master_cat.ProductName,
     master_cat.Dist_ID,
     master_cat.Dist_Part_Number
@@ -1177,6 +1207,7 @@ BEGIN TRY
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
+            target.MfgID = source.etilizeMfgId,
             target.CategoryID = source.EtilizeCatID,
             target.ProductName = source.ProductName,
             target.Dist_ID = source.Dist_ID,
@@ -1214,6 +1245,7 @@ BEGIN TRY
                 EtilizeProductID,
                 ParentCategoryID,
                 CategoryID,
+                MfgID,
                 ProductName,
                 Dist_ID,
                 Dist_PartNumber,
@@ -1249,6 +1281,7 @@ BEGIN TRY
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
                 source.EtilizeCatID,
+                source.etilizeMfgId,
                 source.ProductName,
                 source.Dist_ID,
                 source.Dist_Part_Number,
@@ -1297,6 +1330,7 @@ BEGIN TRY
     master_cat.EtilizeProductID,
     master_cat.EtilizeParentCatID,
     master_cat.EtilizeCatID,
+    master_cat.etilizeMfgId,
     master_cat.ProductName,
     master_cat.Dist_ID,
     master_cat.Dist_Part_Number
@@ -1332,6 +1366,7 @@ BEGIN TRY
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
+            target.MfgID = source.etilizeMfgId,
             target.CategoryID = source.EtilizeCatID,
             target.ProductName = source.ProductName,
             target.Dist_ID = source.Dist_ID,
@@ -1369,6 +1404,7 @@ BEGIN TRY
                 EtilizeProductID,
                 ParentCategoryID,
                 CategoryID,
+                MfgID,
                 ProductName,
                 Dist_ID,
                 Dist_PartNumber,
@@ -1404,6 +1440,7 @@ BEGIN TRY
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
                 source.EtilizeCatID,
+                source.etilizeMfgId,
                 source.ProductName,
                 source.Dist_ID,
                 source.Dist_Part_Number,
@@ -1452,6 +1489,7 @@ BEGIN TRY
     master_cat.EtilizeProductID,
     master_cat.EtilizeParentCatID,
     master_cat.EtilizeCatID,
+    master_cat.etilizeMfgId,
     master_cat.ProductName,
     master_cat.Dist_ID,
     master_cat.Dist_Part_Number
@@ -1487,6 +1525,7 @@ BEGIN TRY
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
+            target.MfgID = source.etilizeMfgId,
             target.CategoryID = source.EtilizeCatID,
             target.ProductName = source.ProductName,
             target.Dist_ID = source.Dist_ID,
@@ -1524,6 +1563,7 @@ BEGIN TRY
                 EtilizeProductID,
                 ParentCategoryID,
                 CategoryID,
+                MfgID,
                 ProductName,
                 Dist_ID,
                 Dist_PartNumber,
@@ -1559,6 +1599,7 @@ BEGIN TRY
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
                 source.EtilizeCatID,
+                source.etilizeMfgId,
                 source.ProductName,
                 source.Dist_ID,
                 source.Dist_Part_Number,
@@ -1606,6 +1647,7 @@ BEGIN TRY
     master_cat.EtilizeProductID,
     master_cat.EtilizeParentCatID,
     master_cat.EtilizeCatID,
+    master_cat.etilizeMfgId,
     master_cat.ProductName,
     master_cat.Dist_ID,
     master_cat.Dist_Part_Number
@@ -1641,6 +1683,7 @@ BEGIN TRY
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
+            target.MfgID = source.etilizeMfgId,
             target.CategoryID = source.EtilizeCatID,
             target.ProductName = source.ProductName,
             target.Dist_ID = source.Dist_ID,
@@ -1678,6 +1721,7 @@ BEGIN TRY
                 EtilizeProductID,
                 ParentCategoryID,
                 CategoryID,
+                MfgID,
                 ProductName,
                 Dist_ID,
                 Dist_PartNumber,
@@ -1713,6 +1757,7 @@ BEGIN TRY
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
                 source.EtilizeCatID,
+                source.etilizeMfgId,
                 source.ProductName,
                 source.Dist_ID,
                 source.Dist_Part_Number,
@@ -1760,6 +1805,7 @@ BEGIN TRY
     master_cat.EtilizeProductID,
     master_cat.EtilizeParentCatID,
     master_cat.EtilizeCatID,
+    master_cat.etilizeMfgId,
     master_cat.ProductName,
     master_cat.Dist_ID,
     master_cat.Dist_Part_Number
@@ -1795,6 +1841,7 @@ BEGIN TRY
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
+            target.MfgID = source.etilizeMfgId,
             target.CategoryID = source.EtilizeCatID,
             target.ProductName = source.ProductName,
             target.Dist_ID = source.Dist_ID,
@@ -1832,6 +1879,7 @@ BEGIN TRY
                 EtilizeProductID,
                 ParentCategoryID,
                 CategoryID,
+                MfgID,
                 ProductName,
                 Dist_ID,
                 Dist_PartNumber,
@@ -1867,6 +1915,7 @@ BEGIN TRY
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
                 source.EtilizeCatID,
+                source.etilizeMfgId,
                 source.ProductName,
                 source.Dist_ID,
                 source.Dist_Part_Number,
@@ -1915,6 +1964,7 @@ BEGIN TRY
     master_cat.EtilizeProductID,
     master_cat.EtilizeParentCatID,
     master_cat.EtilizeCatID,
+    master_cat.etilizeMfgId,
     master_cat.ProductName,
     master_cat.Dist_ID,
     master_cat.Dist_Part_Number
@@ -1950,6 +2000,7 @@ AND price_cat.Dist_ID = 20 -- Synnex
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
+            target.MfgID = source.etilizeMfgId,
             target.CategoryID = source.EtilizeCatID,
             target.ProductName = source.ProductName,
             target.Dist_ID = source.Dist_ID,
@@ -1987,6 +2038,7 @@ AND price_cat.Dist_ID = 20 -- Synnex
                 EtilizeProductID,
                 ParentCategoryID,
                 CategoryID,
+                MfgID,
                 ProductName,
                 Dist_ID,
                 Dist_PartNumber,
@@ -2022,6 +2074,7 @@ AND price_cat.Dist_ID = 20 -- Synnex
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
                 source.EtilizeCatID,
+                source.etilizeMfgId,
                 source.ProductName,
                 source.Dist_ID,
                 source.Dist_Part_Number,
@@ -2069,6 +2122,7 @@ BEGIN TRY
     master_cat.EtilizeProductID,
     master_cat.EtilizeParentCatID,
     master_cat.EtilizeCatID,
+    master_cat.etilizeMfgId,
     master_cat.ProductName,
     master_cat.Dist_ID,
     master_cat.Dist_Part_Number
@@ -2104,6 +2158,7 @@ AND price_cat.Dist_ID = 20 -- Synnex
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
+            target.MfgID = source.etilizeMfgId,
             target.CategoryID = source.EtilizeCatID,
             target.ProductName = source.ProductName,
             target.Dist_ID = source.Dist_ID,
@@ -2141,6 +2196,7 @@ AND price_cat.Dist_ID = 20 -- Synnex
                 EtilizeProductID,
                 ParentCategoryID,
                 CategoryID,
+                MfgID,
                 ProductName,
                 Dist_ID,
                 Dist_PartNumber,
@@ -2176,6 +2232,7 @@ AND price_cat.Dist_ID = 20 -- Synnex
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
                 source.EtilizeCatID,
+                source.etilizeMfgId,
                 source.ProductName,
                 source.Dist_ID,
                 source.Dist_Part_Number,
@@ -2223,6 +2280,7 @@ BEGIN TRY
     master_cat.EtilizeProductID,
     master_cat.EtilizeParentCatID,
     master_cat.EtilizeCatID,
+    master_cat.etilizeMfgId,
     master_cat.ProductName,
     master_cat.Dist_ID,
     master_cat.Dist_Part_Number
@@ -2258,6 +2316,7 @@ AND price_cat.Dist_ID = 20 -- Synnex
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
+            target.MfgID = source.etilizeMfgId,
             target.CategoryID = source.EtilizeCatID,
             target.ProductName = source.ProductName,
             target.Dist_ID = source.Dist_ID,
@@ -2295,6 +2354,7 @@ AND price_cat.Dist_ID = 20 -- Synnex
                 EtilizeProductID,
                 ParentCategoryID,
                 CategoryID,
+                MfgID,
                 ProductName,
                 Dist_ID,
                 Dist_PartNumber,
@@ -2330,6 +2390,7 @@ AND price_cat.Dist_ID = 20 -- Synnex
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
                 source.EtilizeCatID,
+                source.etilizeMfgId,
                 source.ProductName,
                 source.Dist_ID,
                 source.Dist_Part_Number,
@@ -2377,6 +2438,7 @@ BEGIN TRY
     master_cat.EtilizeProductID,
     master_cat.EtilizeParentCatID,
     master_cat.EtilizeCatID,
+    master_cat.etilizeMfgId,
     master_cat.ProductName,
     master_cat.Dist_ID,
     master_cat.Dist_Part_Number
@@ -2412,6 +2474,7 @@ AND price_cat.Dist_ID = 20 -- Synnex
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
+            target.MfgID = source.etilizeMfgId,
             target.CategoryID = source.EtilizeCatID,
             target.ProductName = source.ProductName,
             target.Dist_ID = source.Dist_ID,
@@ -2449,6 +2512,7 @@ AND price_cat.Dist_ID = 20 -- Synnex
                 EtilizeProductID,
                 ParentCategoryID,
                 CategoryID,
+                MfgID,
                 ProductName,
                 Dist_ID,
                 Dist_PartNumber,
@@ -2484,6 +2548,7 @@ AND price_cat.Dist_ID = 20 -- Synnex
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
                 source.EtilizeCatID,
+                source.etilizeMfgId,
                 source.ProductName,
                 source.Dist_ID,
                 source.Dist_Part_Number,
@@ -2532,6 +2597,7 @@ BEGIN TRY
     master_cat.EtilizeProductID,
     master_cat.EtilizeParentCatID,
     master_cat.EtilizeCatID,
+    master_cat.etilizeMfgId,
     master_cat.ProductName,
     master_cat.Dist_ID,
     master_cat.Dist_Part_Number
@@ -2567,6 +2633,7 @@ AND price_cat.Dist_ID = 20 -- Synnex
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
+            target.MfgID = source.etilizeMfgId,
             target.CategoryID = source.EtilizeCatID,
             target.ProductName = source.ProductName,
             target.Dist_ID = source.Dist_ID,
@@ -2604,6 +2671,7 @@ AND price_cat.Dist_ID = 20 -- Synnex
                 EtilizeProductID,
                 ParentCategoryID,
                 CategoryID,
+                MfgID,
                 ProductName,
                 Dist_ID,
                 Dist_PartNumber,
@@ -2639,6 +2707,7 @@ AND price_cat.Dist_ID = 20 -- Synnex
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
                 source.EtilizeCatID,
+                source.etilizeMfgId,
                 source.ProductName,
                 source.Dist_ID,
                 source.Dist_Part_Number,
@@ -2686,6 +2755,7 @@ BEGIN TRY
     master_cat.EtilizeProductID,
     master_cat.EtilizeParentCatID,
     master_cat.EtilizeCatID,
+    master_cat.etilizeMfgId,
     master_cat.ProductName,
     master_cat.Dist_ID,
     master_cat.Dist_Part_Number
@@ -2721,6 +2791,7 @@ AND price_cat.Dist_ID = 20 -- Synnex
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
+            target.MfgID = source.etilizeMfgId,
             target.CategoryID = source.EtilizeCatID,
             target.ProductName = source.ProductName,
             target.Dist_ID = source.Dist_ID,
@@ -2758,6 +2829,7 @@ AND price_cat.Dist_ID = 20 -- Synnex
                 EtilizeProductID,
                 ParentCategoryID,
                 CategoryID,
+                MfgID,
                 ProductName,
                 Dist_ID,
                 Dist_PartNumber,
@@ -2793,6 +2865,7 @@ AND price_cat.Dist_ID = 20 -- Synnex
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
                 source.EtilizeCatID,
+                source.etilizeMfgId,
                 source.ProductName,
                 source.Dist_ID,
                 source.Dist_Part_Number,
@@ -2840,6 +2913,7 @@ BEGIN TRY
     master_cat.EtilizeProductID,
     master_cat.EtilizeParentCatID,
     master_cat.EtilizeCatID,
+    master_cat.etilizeMfgId,
     master_cat.ProductName,
     master_cat.Dist_ID,
     master_cat.Dist_Part_Number
@@ -2875,6 +2949,7 @@ AND price_cat.Dist_ID = 20 -- Synnex
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
+            target.MfgID = source.etilizeMfgId,
             target.CategoryID = source.EtilizeCatID,
             target.ProductName = source.ProductName,
             target.Dist_ID = source.Dist_ID,
@@ -2912,6 +2987,7 @@ AND price_cat.Dist_ID = 20 -- Synnex
                 EtilizeProductID,
                 ParentCategoryID,
                 CategoryID,
+                MfgID,
                 ProductName,
                 Dist_ID,
                 Dist_PartNumber,
@@ -2947,6 +3023,7 @@ AND price_cat.Dist_ID = 20 -- Synnex
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
                 source.EtilizeCatID,
+                source.etilizeMfgId,
                 source.ProductName,
                 source.Dist_ID,
                 source.Dist_Part_Number,
@@ -2994,6 +3071,7 @@ BEGIN TRY
     master_cat.EtilizeProductID,
     master_cat.EtilizeParentCatID,
     master_cat.EtilizeCatID,
+    master_cat.etilizeMfgId,
     master_cat.ProductName,
     master_cat.Dist_ID,
     master_cat.Dist_Part_Number
@@ -3029,6 +3107,7 @@ AND price_cat.Dist_ID = 20 -- Synnex
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
+            target.MfgID = source.etilizeMfgId,
             target.CategoryID = source.EtilizeCatID,
             target.ProductName = source.ProductName,
             target.Dist_ID = source.Dist_ID,
@@ -3066,6 +3145,7 @@ AND price_cat.Dist_ID = 20 -- Synnex
                 EtilizeProductID,
                 ParentCategoryID,
                 CategoryID,
+                MfgID,
                 ProductName,
                 Dist_ID,
                 Dist_PartNumber,
@@ -3101,6 +3181,7 @@ AND price_cat.Dist_ID = 20 -- Synnex
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
                 source.EtilizeCatID,
+                source.etilizeMfgId,
                 source.ProductName,
                 source.Dist_ID,
                 source.Dist_Part_Number,
@@ -3149,6 +3230,7 @@ BEGIN TRY
     master_cat.EtilizeProductID,
     master_cat.EtilizeParentCatID,
     master_cat.EtilizeCatID,
+    master_cat.etilizeMfgId,
     master_cat.ProductName,
     master_cat.Dist_ID,
     master_cat.Dist_Part_Number
@@ -3183,6 +3265,7 @@ BEGIN TRY
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
+            target.MfgID = source.etilizeMfgId,
             target.CategoryID = source.EtilizeCatID,
             target.ProductName = source.ProductName,
             target.Dist_ID = source.Dist_ID,
@@ -3220,6 +3303,7 @@ BEGIN TRY
                 EtilizeProductID,
                 ParentCategoryID,
                 CategoryID,
+                MfgID,
                 ProductName,
                 Dist_ID,
                 Dist_PartNumber,
@@ -3255,6 +3339,7 @@ BEGIN TRY
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
                 source.EtilizeCatID,
+                source.etilizeMfgId,
                 source.ProductName,
                 source.Dist_ID,
                 source.Dist_Part_Number,
@@ -3303,6 +3388,7 @@ BEGIN TRY
     master_cat.EtilizeProductID,
     master_cat.EtilizeParentCatID,
     master_cat.EtilizeCatID,
+    master_cat.etilizeMfgId,
     master_cat.ProductName,
     master_cat.Dist_ID,
     master_cat.Dist_Part_Number
@@ -3337,6 +3423,7 @@ BEGIN TRY
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
+            target.MfgID = source.etilizeMfgId,
             target.CategoryID = source.EtilizeCatID,
             target.ProductName = source.ProductName,
             target.Dist_ID = source.Dist_ID,
@@ -3374,6 +3461,7 @@ BEGIN TRY
                 EtilizeProductID,
                 ParentCategoryID,
                 CategoryID,
+                MfgID,
                 ProductName,
                 Dist_ID,
                 Dist_PartNumber,
@@ -3409,6 +3497,7 @@ BEGIN TRY
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
                 source.EtilizeCatID,
+                source.etilizeMfgId,
                 source.ProductName,
                 source.Dist_ID,
                 source.Dist_Part_Number,
@@ -3458,6 +3547,7 @@ BEGIN TRY
     master_cat.EtilizeProductID,
     master_cat.EtilizeParentCatID,
     master_cat.EtilizeCatID,
+    master_cat.etilizeMfgId,
     master_cat.ProductName,
     master_cat.Dist_ID,
     master_cat.Dist_Part_Number
@@ -3493,6 +3583,7 @@ BEGIN TRY
             target.Show_On_Storesite = 1, -- True
             target.EtilizeProductID = source.EtilizeProductID,
             target.ParentCategoryID = source.EtilizeParentCatID,
+            target.MfgID = source.etilizeMfgId,
             target.CategoryID = source.EtilizeCatID,
             target.ProductName = source.ProductName,
             target.Dist_ID = source.Dist_ID,
@@ -3530,6 +3621,7 @@ BEGIN TRY
                 EtilizeProductID,
                 ParentCategoryID,
                 CategoryID,
+                MfgID,
                 ProductName,
                 Dist_ID,
                 Dist_PartNumber,
@@ -3565,6 +3657,7 @@ BEGIN TRY
                 source.EtilizeProductID,
                 source.EtilizeParentCatID,
                 source.EtilizeCatID,
+                source.etilizeMfgId,
                 source.ProductName,
                 source.Dist_ID,
                 source.Dist_Part_Number,
@@ -3680,7 +3773,7 @@ BEGIN TRY
 
 /** DELETE ContractItems created during prior runs (FILTERED to single ContractId and to exclude records that have a non-null value) **/
 DELETE FROM [10.10.10.13].[wwcp].[dbo].[ContractItem]
-       WHERE ContractID = @DestinationContractId 
+       WHERE ContractID = @DestinationContractId
            AND AddedById IS NULL;
 
 
