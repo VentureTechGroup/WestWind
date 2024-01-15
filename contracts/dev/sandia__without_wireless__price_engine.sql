@@ -1,4 +1,4 @@
-/**
+CATALOG/**
 *
 * WESTWIND: Sandia Price Engine (EXCLUDING Wireless)
 *
@@ -13,8 +13,8 @@ DECLARE @DestinationContractId AS INT;
 SET @DestinationContractId = 60;
 
 DECLARE @ContractNumber AS VARCHAR(100);
-SET @ContractNumber = ''
-
+SET @ContractNumber = 'SANDIA - SCMC E-CATALOG'
+    
 DECLARE @ContractStartDate AS DATETIME;
 SET @ContractStartDate = GETDATE();
 
