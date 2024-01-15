@@ -5014,13 +5014,13 @@ WHERE ((Price - Cost) / Price) * 100 < 5;
 BEGIN TRY
 
 /** DELETE ContractItems created during prior runs (FILTERED to single ContractId**/
-DELETE FROM [192.168.80.162].[wwcp].[dbo].[ContractItem] WHERE ContractID = @DestinationContractId;
+DELETE FROM [10.10.10.13].[wwcp].[dbo].[ContractItem] WHERE ContractID = @DestinationContractId;
 
 SET @PriceRuleDiscount = ''; -- Set Discount Percentage Here
 SET @PriceRuleName = '';
 
 
-INSERT INTO [192.168.80.162].[wwcp].[dbo].[ContractItem] (GSAPrice,
+INSERT INTO [10.10.10.13].[wwcp].[dbo].[ContractItem] (GSAPrice,
                                                           Price,
                                                           ContractID,
                                                           Vendor,
