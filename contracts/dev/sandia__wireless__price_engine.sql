@@ -16,7 +16,7 @@ DECLARE @DestinationContractId AS INT;
 SET @DestinationContractId = 55;
 
 DECLARE @ContractNumber AS VARCHAR(100);
-SET @ContractNumber = ''
+SET @ContractNumber = 'SCMC WS81156 E-CATALOG'
 
 DECLARE @ContractStartDate AS DATETIME;
 SET @ContractStartDate = GETDATE();
