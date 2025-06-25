@@ -1,0 +1,1655 @@
+{
+    "UsedStandardObjects": {
+        "Task": {
+            "*": 3900884,
+            "Default_Task": 97856,
+            "RFP_in_Process": 3,
+            "Opportunity_Lost": 78,
+            "Log_A_Call": 114599,
+            "Opportunity_Won": 286,
+            "CityBase": 3481223,
+            "OpenCounter": 1306,
+            "Reference_Notes": 0,
+            "Bonfire_Default_Task": 51980
+        },
+        "Contact": {
+            "*": 1654041,
+            "Standard_Record_Type": 1590776,
+            "eCivis_Record_Type": 144,
+            "OpenCounter_Record_Type": 0,
+            "Bonfire_Prospects_Clients": 662
+        },
+        "AccountContactRelation": {
+            "*": 1591131
+        },
+        "CampaignMember": {
+            "*": 1550399
+        },
+        "EmailMessageRelation": {
+            "*": 1352579
+        },
+        "FeedItem": {
+            "*": 1231385
+        },
+        "Account": {
+            "*": 1020105,
+            "GTY_Prospect": 200195,
+            "Customer_Questica": 0,
+            "Customer_eCivis": 0,
+            "Customer_Bonfire": 0,
+            "Customer_CityBase": 0,
+            "Customer_Sherpa": 0,
+            "Customer_OpenCounter": 0,
+            "GTY_Channel_Partner": 126,
+            "Customer_EUNA": 3511,
+            "Customer_IonWave": 0,
+            "Parent_EUNA": 505,
+            "Vendor_Customer": 815629,
+            "Customer_Child": 135
+        },
+        "EmailMessage": {
+            "*": 504950
+        },
+        "Attachment": {
+            "*": 445202
+        },
+        "Note": {
+            "*": 216974
+        },
+        "FieldPermissions": {
+            "*": 207210
+        },
+        "Lead": {
+            "*": 95587,
+            "Standard_Lead_Record_Type": 89029,
+            "eCivis_Lead_Record_Type": 2605,
+            "CityBase_Lead_Record_Type": 3953
+        },
+        "CampaignInfluence": {
+            "*": 85205
+        },
+        "VoiceCall": {
+            "*": 83555
+        },
+        "Case": {
+            "*": 76803
+        },
+        "OpportunityContactRole": {
+            "*": 71151
+        },
+        "CaseMilestone": {
+            "*": 66953
+        },
+        "EventRelation": {
+            "*": 57406
+        },
+        "SurveyInvitation": {
+            "*": 46148
+        },
+        "DataAssetSemanticGraphEdge": {
+            "*": 43605
+        },
+        "OpportunityTeamMember": {
+            "*": 33587
+        },
+        "OpportunitySplit": {
+            "*": 33544
+        },
+        "Opportunity": {
+            "*": 33390,
+            "eCivis": 1,
+            "Questica": 1,
+            "GTY": 0,
+            "CityBase": 10,
+            "OpenCounter": 0,
+            "Sherpa": 0,
+            "Bonfire_FOC_Trial": 0,
+            "Bonfire_New_Business": 8,
+            "Bonfire_Renewal": 5961,
+            "Bonfire_Upsell": 0,
+            "Bonfire_Vendor": 309,
+            "POC_Trial": 0,
+            "IonWave_New_Business": 0,
+            "IonWave_Renewal": 0,
+            "IonWave_Upsell": 1,
+            "SpedTrack": 0,
+            "EqualLevel": 0,
+            "Demandstar_Vendors": 0,
+            "Demandstar_Vendor": 0,
+            "Euna_Sale": 27099
+        },
+        "OpportunityLineItem": {
+            "*": 25882
+        },
+        "CampaignMemberStatus": {
+            "*": 23312
+        },
+        "Event": {
+            "*": 19708,
+            "Event": 3359,
+            "CityBaseEvent": 220,
+            "QB_Reference": 0
+        },
+        "ObjectPermissions": {
+            "*": 17489
+        },
+        "ListEmailIndividualRecipient": {
+            "*": 16056
+        },
+        "CaseComment": {
+            "*": 10519
+        },
+        "PermissionSetTabSetting": {
+            "*": 9119
+        },
+        "DuplicateRecordItem": {
+            "*": 8301
+        },
+        "ListEmail": {
+            "*": 7781
+        },
+        "PermissionSetAssignment": {
+            "*": 6929
+        },
+        "DuplicateRecordSet": {
+            "*": 6359
+        },
+        "FeedAttachment": {
+            "*": 5726
+        },
+        "Document": {
+            "*": 5288
+        },
+        "VideoCallParticipant": {
+            "*": 5124
+        },
+        "FeedComment": {
+            "*": 4757
+        },
+        "PricebookEntry": {
+            "*": 3640
+        },
+        "ApexClass": {
+            "*": 3639
+        },
+        "Campaign": {
+            "*": 3325,
+            "eCivis_Record_Type": 456,
+            "Questica": 766,
+            "OpenCounter": 125,
+            "CityBase": 276,
+            "Bonfire": 1481,
+            "Euna": 221
+        },
+        "EmailTemplate": {
+            "*": 3100
+        },
+        "ProcessInstanceWorkitem": {
+            "*": 2504
+        },
+        "PermissionSetLicenseAssign": {
+            "*": 2285
+        },
+        "QuoteLineItem": {
+            "*": 1946
+        },
+        "User": {
+            "*": 1813
+        },
+        "UserLogin": {
+            "*": 1804
+        },
+        "VoiceCallRecording": {
+            "*": 1674
+        },
+        "Knowledge__kav": {
+            "*": 1650,
+            "Knowledge_Articles": 1650
+        },
+        "UserAppMenuCustomization": {
+            "*": 1519
+        },
+        "ContentAsset": {
+            "*": 1409
+        },
+        "RecentlyViewed": {
+            "*": 1123
+        },
+        "MacroInstruction": {
+            "*": 1107
+        },
+        "Contract": {
+            "*": 1071
+        },
+        "NetworkMember": {
+            "*": 973
+        },
+        "OpportunityLineItemSchedule": {
+            "*": 973
+        },
+        "VideoCall": {
+            "*": 956
+        },
+        "Asset": {
+            "*": 899
+        },
+        "ContentDistributionView": {
+            "*": 747
+        },
+        "Folder": {
+            "*": 746
+        },
+        "AnalyticsLicensedAsset": {
+            "*": 732
+        },
+        "UserAppInfo": {
+            "*": 711
+        },
+        "TimeSlot": {
+            "*": 695
+        },
+        "AuraDefinition": {
+            "*": 663
+        },
+        "InsightsExternalData": {
+            "*": 663
+        },
+        "UserPrioritizedRecord": {
+            "*": 655
+        },
+        "Group": {
+            "*": 649
+        },
+        "ApexPage": {
+            "*": 639
+        },
+        "ForecastingQuota": {
+            "*": 577
+        },
+        "ActionCadence": {
+            "*": 544
+        },
+        "PipelineInspectionListView": {
+            "*": 496
+        },
+        "StaticResource": {
+            "*": 450
+        },
+        "PermissionSet": {
+            "*": 447
+        },
+        "ApexTestResult": {
+            "*": 446
+        },
+        "UserPreference": {
+            "*": 367
+        },
+        "PromptAction": {
+            "*": 366
+        },
+        "Quote": {
+            "*": 358
+        },
+        "MlQueryObservation": {
+            "*": 355
+        },
+        "FlowRecord": {
+            "*": 351
+        },
+        "ContentDistribution": {
+            "*": 341
+        },
+        "ObjectTerritory2AssignmentRuleItem": {
+            "*": 334
+        },
+        "ApexTrigger": {
+            "*": 321
+        },
+        "ApexComponent": {
+            "*": 320
+        },
+        "EmailServicesAddress": {
+            "*": 249
+        },
+        "AuraDefinitionBundle": {
+            "*": 239
+        },
+        "VoiceMailContent": {
+            "*": 212
+        },
+        "QuoteDocument": {
+            "*": 203
+        },
+        "ObjectTerritory2AssignmentRule": {
+            "*": 201
+        },
+        "RuleTerritory2Association": {
+            "*": 200
+        },
+        "LandingPage": {
+            "*": 197
+        },
+        "QuickText": {
+            "*": 196
+        },
+        "Territory2": {
+            "*": 190
+        },
+        "MlIntentUtterance": {
+            "*": 169
+        },
+        "ContentDocument": {
+            "*": 143
+        },
+        "ContentVersion": {
+            "*": 143
+        },
+        "OperatingHours": {
+            "*": 139
+        },
+        "WebLink": {
+            "*": 134
+        },
+        "RecordType": {
+            "*": 133
+        },
+        "Macro": {
+            "*": 130
+        },
+        "AppMenuItem": {
+            "*": 111
+        },
+        "CallTemplate": {
+            "*": 107
+        },
+        "UserPackageLicense": {
+            "*": 102
+        },
+        "AccountTeamMember": {
+            "*": 101
+        },
+        "VoiceUserPreferences": {
+            "*": 89
+        },
+        "UserTerritory2AssocLog": {
+            "*": 82
+        },
+        "UserRole": {
+            "*": 70
+        },
+        "UserTerritory2Association": {
+            "*": 70
+        },
+        "VoiceUserLine": {
+            "*": 68
+        },
+        "Topic": {
+            "*": 65
+        },
+        "BrandingSetProperty": {
+            "*": 60
+        },
+        "ContentFolder": {
+            "*": 60
+        },
+        "ContentWorkspaceDoc": {
+            "*": 43
+        },
+        "Profile": {
+            "*": 43
+        },
+        "CustomBrandAsset": {
+            "*": 39
+        },
+        "UserEmailPreferredPerson": {
+            "*": 35
+        },
+        "CalendarView": {
+            "*": 33
+        },
+        "ForecastingType": {
+            "*": 33
+        },
+        "Pricebook2": {
+            "*": 31,
+            "Standard_Price_Book_Record_Type": 8,
+            "eCivis_Price_Book": 22
+        },
+        "VoiceCallListItem": {
+            "*": 26
+        },
+        "ConversationDefinitionDialog": {
+            "*": 25
+        },
+        "RecordAction": {
+            "*": 24
+        },
+        "EmailRoutingAddress": {
+            "*": 23
+        },
+        "OrgWideEmailAddress": {
+            "*": 23
+        },
+        "SetupAssistantStep": {
+            "*": 23
+        },
+        "NavigationMenuItem": {
+            "*": 22
+        },
+        "PermissionSetGroup": {
+            "*": 20
+        },
+        "ForecastingAdjustment": {
+            "*": 19
+        },
+        "CollaborationGroupMember": {
+            "*": 17
+        },
+        "Holiday": {
+            "*": 17
+        },
+        "ListViewChart": {
+            "*": 17
+        },
+        "UserDefinedLabelAssignment": {
+            "*": 16
+        },
+        "Audience": {
+            "*": 15
+        },
+        "DatedConversionRate": {
+            "*": 15
+        },
+        "NetworkPageOverride": {
+            "*": 15
+        },
+        "BusinessHours": {
+            "*": 13
+        },
+        "BusinessProcess": {
+            "*": 13
+        },
+        "Entitlement": {
+            "*": 13
+        },
+        "VoiceMailGreeting": {
+            "*": 13
+        },
+        "WaveAutoInstallRequest": {
+            "*": 12
+        },
+        "WorkAccess": {
+            "*": 12
+        },
+        "WorkBadgeDefinition": {
+            "*": 12
+        },
+        "CustomBrand": {
+            "*": 11
+        },
+        "ExternalEvent": {
+            "*": 11
+        },
+        "OnboardingMetrics": {
+            "*": 9
+        },
+        "NavigationLinkSet": {
+            "*": 8
+        },
+        "Territory2Type": {
+            "*": 7
+        },
+        "NetworkMemberGroup": {
+            "*": 6
+        },
+        "AuthProvider": {
+            "*": 5
+        },
+        "BrandTemplate": {
+            "*": 5
+        },
+        "CollaborationGroup": {
+            "*": 5
+        },
+        "MilestoneType": {
+            "*": 5
+        },
+        "PromptError": {
+            "*": 5
+        },
+        "ServiceChannelStatusField": {
+            "*": 5
+        },
+        "UserDefinedLabel": {
+            "*": 5
+        },
+        "VoiceMailMessage": {
+            "*": 5
+        },
+        "CspTrustedSite": {
+            "*": 4
+        },
+        "CustomNotificationType": {
+            "*": 4
+        },
+        "EmailDomainFilter": {
+            "*": 4
+        },
+        "EmailDomainKey": {
+            "*": 4
+        },
+        "PardotTenant": {
+            "*": 4
+        },
+        "SurveySubject": {
+            "*": 4
+        },
+        "TodayGoal": {
+            "*": 4
+        },
+        "BrandingSet": {
+            "*": 3
+        },
+        "ContentWorkspacePermission": {
+            "*": 3
+        },
+        "CorsWhitelistEntry": {
+            "*": 3
+        },
+        "CurrencyType": {
+            "*": 3
+        },
+        "GenAiPlannerFunctionDef": {
+            "*": 3
+        },
+        "ListEmailRecipientSource": {
+            "*": 3
+        },
+        "Network": {
+            "*": 3
+        },
+        "OpportunitySplitType": {
+            "*": 3
+        },
+        "PipelineInspectionSumField": {
+            "*": 3
+        },
+        "ServiceChannel": {
+            "*": 3
+        },
+        "ServicePresenceStatus": {
+            "*": 3
+        },
+        "BotVersion": {
+            "*": 2
+        },
+        "BroadcastTopic": {
+            "*": 2
+        },
+        "ContentWorkspace": {
+            "*": 2
+        },
+        "EmailServicesFunction": {
+            "*": 2
+        },
+        "ForecastingSourceDefinition": {
+            "*": 2
+        },
+        "ForecastingTypeSource": {
+            "*": 2
+        },
+        "MessagingChannel": {
+            "*": 2
+        },
+        "MsgChannelLanguageKeyword": {
+            "*": 2
+        },
+        "QueueRoutingConfig": {
+            "*": 2
+        },
+        "Scontrol": {
+            "*": 2
+        },
+        "ServiceChannelStatus": {
+            "*": 2
+        },
+        "Territory2Model": {
+            "*": 2
+        },
+        "VoiceCallList": {
+            "*": 2
+        },
+        "ApplicationSubtypeDefinition": {
+            "*": 1
+        },
+        "BusinessProcessTypeDef": {
+            "*": 1
+        },
+        "CallCoachingMediaProvider": {
+            "*": 1
+        },
+        "ChannelObjectLinkingRule": {
+            "*": 1
+        },
+        "ContentWorkspaceMember": {
+            "*": 1
+        },
+        "EmailRelay": {
+            "*": 1
+        },
+        "ExplainabilityActionDef": {
+            "*": 1
+        },
+        "ExplainabilityActionVersion": {
+            "*": 1
+        },
+        "GenAiFunctionDefinition": {
+            "*": 1
+        },
+        "GenAiPlannerDefinition": {
+            "*": 1
+        },
+        "MutingPermissionSet": {
+            "*": 1
+        },
+        "NetworkAuthApiSettings": {
+            "*": 1
+        },
+        "Organization": {
+            "*": 1
+        },
+        "PresenceUserConfig": {
+            "*": 1
+        },
+        "SecurityCustomBaseline": {
+            "*": 1
+        },
+        "SharingRecordCollection": {
+            "*": 1
+        },
+        "SharingRecordCollectionItem": {
+            "*": 1
+        },
+        "UserWorkList": {
+            "*": 1
+        },
+        "UserWorkListItem": {
+            "*": 1
+        },
+        "VoiceOrgSetting": {
+            "*": 1
+        }
+    },
+    "UsedCustomObjects": {
+        "Customer_Address__c": {
+            "*": 191178
+        },
+        "QB_Pipeline_Snapshot__c": {
+            "*": 164200
+        },
+        "eCivis_Pipeline_Snapshot__c": {
+            "*": 40879
+        },
+        "GTY_Qualified_Funnel_Snapshot__c": {
+            "*": 38786
+        },
+        "Forecast_Snapshot__c": {
+            "*": 25681
+        },
+        "Working_Day__c": {
+            "*": 19992
+        },
+        "MQC_Activity__c": {
+            "*": 11712
+        },
+        "GTY_Solutions__c": {
+            "*": 11170,
+            "Bright_Record_Type": 0,
+            "Vivid_Record_Type": 0,
+            "Brilliant_Record_Type": 0,
+            "Custom_SaaS_Record_Type": 1,
+            "Custom_Licensed_Record_Type": 0,
+            "Openbook_Standalone": 0,
+            "GTY_Solution": 11169
+        },
+        "QB_Quarterly_Snapshots__c": {
+            "*": 6592
+        },
+        "QB__c": {
+            "*": 3880
+        },
+        "Project_Snapshot__c": {
+            "*": 3535
+        },
+        "eCivis_Active_Pipeline_Snapshot__c": {
+            "*": 2682
+        },
+        "Field_Change_Request__c": {
+            "*": 2067
+        },
+        "Ops_Requests__c": {
+            "*": 2021
+        },
+        "GTY_Customer_Relationships__c": {
+            "*": 2009
+        },
+        "Communication__c": {
+            "*": 1184
+        },
+        "eCivis_Quarterly_Snapshot__c": {
+            "*": 1050
+        },
+        "RFP_Details__c": {
+            "*": 781,
+            "Questica_RFP_Details": 442,
+            "eCivis_RFP_Details": 184,
+            "Sherpa_RFP_Details": 37,
+            "Bonfire_RFP": 81,
+            "Euna_Payments_RFP": 16,
+            "Euna_Spedtrack": 3,
+            "Co_operative_RFP": 1,
+            "Euna_Budget_Enterprise_RFP": 17
+        },
+        "Ops_Request_User_Join__c": {
+            "*": 517
+        },
+        "Partner_Account__c": {
+            "*": 490
+        },
+        "Contract_Grading__c": {
+            "*": 380
+        },
+        "Client_Profile__c": {
+            "*": 336
+        },
+        "Weekly_Partner_Status_Report__c": {
+            "*": 31
+        },
+        "Partner_Projects__c": {
+            "*": 16
+        },
+        "GTY_Contact_Relationship__c": {
+            "*": 2
+        }
+    },
+    "UsedManagedCustomObjects": {
+        "LeanData__Log__c": {
+            "*": 281595
+        },
+        "pi__Category_Contact_Score__c": {
+            "*": 197946
+        },
+        "dlrs__LookupRollupSummaryScheduleItems__c": {
+            "*": 108471
+        },
+        "SBQQ__QuoteLine__c": {
+            "*": 28158
+        },
+        "LeanData__API_Metric__c": {
+            "*": 22954
+        },
+        "Field_Trip__Field_Analysis__c": {
+            "*": 17994
+        },
+        "LeanData__Routing_Metric__c": {
+            "*": 17518
+        },
+        "Gong__Topic__c": {
+            "*": 17048
+        },
+        "pi__Category_Lead_Score__c": {
+            "*": 16195
+        },
+        "LeanData__Upload_Lead__c": {
+            "*": 15145
+        },
+        "Gong__Tracker__c": {
+            "*": 13366
+        },
+        "dlrs__LookupRollupSummaryLog__c": {
+            "*": 11128
+        },
+        "SBQQ__RecordJob__c": {
+            "*": 10296
+        },
+        "Gong__Call_Stat__c": {
+            "*": 10185
+        },
+        "LinkSquares__Agreement__c": {
+            "*": 7991
+        },
+        "ccpe_r__Utilization__c": {
+            "*": 7695,
+            "Monthly": 1699,
+            "Weekly": 5996
+        },
+        "SBQQ__Quote__c": {
+            "*": 7127,
+            "Approved": 987,
+            "Draft": 6140
+        },
+        "LinkSquares__RequestLog__c": {
+            "*": 3794
+        },
+        "Gong__Call_Participant__c": {
+            "*": 3022
+        },
+        "ccpe_r__Rate__c": {
+            "*": 2612
+        },
+        "LeanData__Time_To_Action_Tracker__c": {
+            "*": 2527
+        },
+        "LeanData__Scheduled_Run_History__c": {
+            "*": 2213
+        },
+        "Gong__Gong_Call__c": {
+            "*": 2030
+        },
+        "LeanData__LD_Search_2__c": {
+            "*": 1900
+        },
+        "SBQQ__Subscription__c": {
+            "*": 1327
+        },
+        "ccpe_ocp__Cloudcoach_Project1__c": {
+            "*": 1295
+        },
+        "LeanData__LD_Territory_Geo__c": {
+            "*": 1214
+        },
+        "LinkSquares__ErrorLog__c": {
+            "*": 1186
+        },
+        "maps__Analytic__c": {
+            "*": 926
+        },
+        "bofc__BOFCLayoutMatrixChildObject__c": {
+            "*": 627
+        },
+        "Gong__Related_Account__c": {
+            "*": 557
+        },
+        "Gong__Related_Contact__c": {
+            "*": 447
+        },
+        "LeanData__LD_Search__c": {
+            "*": 431
+        },
+        "LinkSquares__FinalizeAgreement__c": {
+            "*": 306,
+            "Request": 1,
+            "Template": 305
+        },
+        "SBQQ__InstallProcessorLog__c": {
+            "*": 255
+        },
+        "Gong__Related_Opportunity__c": {
+            "*": 235
+        },
+        "SBQQ__ProductOption__c": {
+            "*": 205
+        },
+        "LinkSquares__TokenMapping__c": {
+            "*": 191
+        },
+        "LinkSquares__AgreementDetail__c": {
+            "*": 173
+        },
+        "LeanData__Routing_Deployment__c": {
+            "*": 165
+        },
+        "LeanData__Account_Search__c": {
+            "*": 119
+        },
+        "pi__LDFilter__c": {
+            "*": 97
+        },
+        "LeanData__Long_Text_Setting__c": {
+            "*": 92
+        },
+        "LeanData__Graph_Comment__c": {
+            "*": 76
+        },
+        "Gong__Related_Lead__c": {
+            "*": 75
+        },
+        "SBQQ__TemplateSection__c": {
+            "*": 73
+        },
+        "LeanData__Scheduled_Routing_Job__c": {
+            "*": 55
+        },
+        "LeanData__LD_Territory__c": {
+            "*": 50
+        },
+        "SBQQ__SubscribedAsset__c": {
+            "*": 50
+        },
+        "Field_Trip__Object_Analysis__c": {
+            "*": 44
+        },
+        "Field_Trip__Field_Analytic_Config__c": {
+            "*": 41
+        },
+        "maps__MarkerLayerComponent__c": {
+            "*": 37
+        },
+        "SBQQ__CustomAction__c": {
+            "*": 36
+        },
+        "LinkSquares__TemplateMapping__c": {
+            "*": 35
+        },
+        "SBQQ__TemplateContent__c": {
+            "*": 34
+        },
+        "SBQQ__LineColumn__c": {
+            "*": 33
+        },
+        "LeanData__Routing_Graph__c": {
+            "*": 29
+        },
+        "ccpe_r__Rate_Card__c": {
+            "*": 28
+        },
+        "maps__MarkerLayer__c": {
+            "*": 28
+        },
+        "SBQQ__ProductFeature__c": {
+            "*": 23
+        },
+        "SBQQ__QuoteLineGroup__c": {
+            "*": 23
+        },
+        "SBQQ__QuoteTerm__c": {
+            "*": 23
+        },
+        "SBQQ__PriceAction__c": {
+            "*": 22
+        },
+        "SBQQ__SummaryVariable__c": {
+            "*": 22
+        },
+        "SBQQ__PriceCondition__c": {
+            "*": 21
+        },
+        "SBQQ__PriceRule__c": {
+            "*": 18
+        },
+        "pi__Pardot_Scoring_Category__c": {
+            "*": 18
+        },
+        "LeanData__Territory_Segment__c": {
+            "*": 15
+        },
+        "maps__BaseObject__c": {
+            "*": 8
+        },
+        "maps__Folder__c": {
+            "*": 8
+        },
+        "SBQQ__QuoteDocument__c": {
+            "*": 7
+        },
+        "bofc__BOFC_Popup__c": {
+            "*": 7
+        },
+        "ccpe_ocp__External_Deliverable__c": {
+            "*": 7
+        },
+        "maps__MarkerLayerRelatedList__c": {
+            "*": 7
+        },
+        "maps__CalEventLookup__c": {
+            "*": 6
+        },
+        "maps__MiniMapSetting__c": {
+            "*": 6
+        },
+        "LeanData__Lead_Search__c": {
+            "*": 5
+        },
+        "SBQQ__ContractedPrice__c": {
+            "*": 5
+        },
+        "pi__AsyncRequest_Settings__c": {
+            "*": 5
+        },
+        "SBQQ__QuoteTemplate__c": {
+            "*": 4
+        },
+        "rh2__PS_Describe__c": {
+            "*": 3
+        },
+        "rh2__PS_Rollup_Audit__c": {
+            "*": 3
+        },
+        "LeanData__Profile_Permission_Setting__c": {
+            "*": 2
+        },
+        "LeanData__Round_Robin_Setting__c": {
+            "*": 2
+        },
+        "bofc__BOFCProfileExtract__c": {
+            "*": 2
+        },
+        "dfsle__EOS_Type__c": {
+            "*": 2
+        },
+        "maps__Layer__c": {
+            "*": 2
+        },
+        "maps__MapsSetting__c": {
+            "*": 2
+        },
+        "rh2__HS_Filter__c": {
+            "*": 2
+        },
+        "LeanData__Attribution_Configuration__c": {
+            "*": 1
+        },
+        "LeanData__CC_Inserted_Object__c": {
+            "*": 1
+        },
+        "LeanData__LD_Partner_Metadata__c": {
+            "*": 1
+        },
+        "LeanData__LD_Partner__c": {
+            "*": 1
+        },
+        "LeanData__Real_Time_Routing_Setting__c": {
+            "*": 1
+        },
+        "LeanData__Round_Robin_Pool__c": {
+            "*": 1
+        },
+        "LeanData__Round_Robin_Schedule_Setting__c": {
+            "*": 1
+        },
+        "SBQQ__DiscountSchedule__c": {
+            "*": 1
+        },
+        "SBQQ__LookupQuery__c": {
+            "*": 1
+        },
+        "bofc__BOFCLayoutMatrixObject__c": {
+            "*": 1
+        },
+        "bofc__BOFCOBDetails__c": {
+            "*": 1
+        },
+        "bofc__BOFCVRules__c": {
+            "*": 1
+        },
+        "maps__CalEventBaseObj__c": {
+            "*": 1
+        },
+        "maps__LiveDailySummaryConfig__c": {
+            "*": 1
+        },
+        "maps__SettingsGroupAssignment__c": {
+            "*": 1
+        },
+        "maps__SettingsGroup__c": {
+            "*": 1
+        },
+        "maps__TPRole__c": {
+            "*": 1
+        },
+        "pi__AsyncRequest__c": {
+            "*": 1
+        },
+        "pi__Trigger_Settings__c": {
+            "*": 1
+        },
+        "rh2__PS_Settings__c": {
+            "*": 1
+        }
+    },
+    "UnusedStandardObjects": [
+        "AccountBrand",
+        "AccountContactRole",
+        "ActionLinkGroupTemplate",
+        "ActionLinkTemplate",
+        "ActionPlan",
+        "ActionPlanItem",
+        "ActionPlanItemDependency",
+        "ActionPlanTemplate",
+        "ActionPlanTemplateItem",
+        "ActionPlanTemplateItemValue",
+        "ActionPlanTemplateVersion",
+        "ActionPlanTmplPkgConfig",
+        "ActionPlnTmplItmDependency",
+        "ActivationTarget",
+        "ActivationTargetPlatform",
+        "ActivationTargetSecureFTP",
+        "ActivationTrgtIntOrgAccess",
+        "ActvTgtPlatformFieldValue",
+        "AdditionalNumber",
+        "Address",
+        "AgentWork",
+        "Announcement",
+        "ApexEmailNotification",
+        "ApexTestQueueItem",
+        "ApexTestResultLimits",
+        "ApexTestRunResult",
+        "ApexTestSuite",
+        "AppAnalyticsQueryRequest",
+        "AssetRelationship",
+        "AssociatedLocation",
+        "AuditTrailFileExport",
+        "AuthorizationForm",
+        "AuthorizationFormConsent",
+        "AuthorizationFormDataUse",
+        "AuthorizationFormText",
+        "BatchJob",
+        "BatchJobPartFailedRecord",
+        "BatchProcessJobDefinition",
+        "BroadcastTopicCollabRoom",
+        "BroadcastTopicUserRole",
+        "BusinessBrand",
+        "CalcMatrixColumnRange",
+        "CalcProcStepRelationship",
+        "CalculationMatrix",
+        "CalculationMatrixColumn",
+        "CalculationMatrixRow",
+        "CalculationMatrixVersion",
+        "CalculationProcedure",
+        "CalculationProcedureStep",
+        "CalculationProcedureVariable",
+        "CalculationProcedureVersion",
+        "CallCenterRoutingMap",
+        "CaseContactRole",
+        "CaseExternalDocument",
+        "CaseTeamMember",
+        "CaseTeamRole",
+        "CaseTeamTemplate",
+        "CaseTeamTemplateMember",
+        "CategoryData",
+        "CategoryNode",
+        "ChatterExtension",
+        "ChatterExtensionConfig",
+        "CollaborationGroupMemberRequest",
+        "CollaborationRoom",
+        "CommSubscription",
+        "CommSubscriptionChannelType",
+        "CommSubscriptionConsent",
+        "CommSubscriptionTiming",
+        "ConferenceNumber",
+        "ConsumptionRate",
+        "ConsumptionSchedule",
+        "ContactCenterChannel",
+        "ContactPointAddress",
+        "ContactPointConsent",
+        "ContactPointEmail",
+        "ContactPointPhone",
+        "ContactPointTypeConsent",
+        "ContactRequest",
+        "ContentNote",
+        "ContractContactRole",
+        "ContractLineItem",
+        "ConvCoachingRecommendation",
+        "ConvIntelligenceSignalRule",
+        "ConvIntelligenceSignalSubRule",
+        "ConversationChannelDefinition",
+        "ConversationEntry",
+        "ConversationVendorInfo",
+        "CustomHelpMenuItem",
+        "CustomHelpMenuSection",
+        "Customer",
+        "DataIntegrationRecordPurchasePermission",
+        "DataMultiOrgConnection",
+        "DataMultiOrgObjectRef",
+        "DataMultiOrgSyncStatus",
+        "DataUseLegalBasis",
+        "DataUsePurpose",
+        "DecisionMatrixDefinition",
+        "DecisionMatrixDefinitionVersion",
+        "DecisionTable",
+        "DecisionTableDatasetLink",
+        "DecisionTableParameter",
+        "DecisionTblDatasetParameter",
+        "DelegatedAccount",
+        "DocumentAttachmentMap",
+        "DuplicateJob",
+        "EmailCapture",
+        "EmailContent",
+        "EmpUserProvisionProcessErr",
+        "EmpUserProvisioningProcess",
+        "EngagementAttendee",
+        "EngagementChannelType",
+        "EngagementInteraction",
+        "EngagementTopic",
+        "EnhancedLetterhead",
+        "EntitlementTemplate",
+        "ExplainabilityMsgTemplate",
+        "ExpressionFilter",
+        "ExpressionFilterCriteria",
+        "ExpressionSet",
+        "ExpressionSetDefinition",
+        "ExpressionSetDefinitionVersion",
+        "ExpressionSetMessageToken",
+        "ExpressionSetObjectAlias",
+        "ExpressionSetVersion",
+        "ExternalDataUserAuth",
+        "ExternalEventMapping",
+        "FlowOrchestrationInstance",
+        "FlowOrchestrationLog",
+        "FlowOrchestrationStageInstance",
+        "FlowOrchestrationStepInstance",
+        "FlowOrchestrationWorkItem",
+        "FlowRecordRelation",
+        "ForecastingColumnDefinition",
+        "ForecastingCustomData",
+        "ForecastingFilter",
+        "ForecastingFilterCondition",
+        "ForecastingOwnerAdjustment",
+        "ForecastingSrcRecJudgment",
+        "GenAiPlannerAttrDefinition",
+        "GenAiPluginDefinition",
+        "GenAiPluginFunctionDef",
+        "IPAddressRange",
+        "Idea",
+        "IframeWhiteListUrl",
+        "Image",
+        "Individual",
+        "InsightsExternalDataPart",
+        "IntegrationProviderAttr",
+        "IntegrationProviderDef",
+        "LightningExperienceTheme",
+        "LightningOnboardingConfig",
+        "LinkedArticle",
+        "LiveChatSensitiveDataRule",
+        "Location",
+        "LocationTrustMeasure",
+        "MailmergeTemplate",
+        "MarketSegmentActivation",
+        "MarketSegmentDefMapping",
+        "MarketingAppExtAction",
+        "MessagingChannelSkill",
+        "MessagingDeliveryError",
+        "MessagingEndUser",
+        "MessagingLink",
+        "MessagingSession",
+        "MessagingTemplate",
+        "MktSgmntActvtnAudAttribute",
+        "MktSgmntActvtnContactPoint",
+        "MktSgmtActvContactPtField",
+        "MktSgmtActvContactPtSrc",
+        "MktSgmtActvDataSource",
+        "MktSgmtDefCalcInsightFld",
+        "MktSgmtDefDataMdlObjFld",
+        "MlFeatureValueMetric",
+        "MobSecurityCertPinConfig",
+        "MobileApplicationDetail",
+        "MobileSecurityAssignment",
+        "MobileSecurityPolicy",
+        "MyDomainDiscoverableLogin",
+        "NetworkActivityAudit",
+        "NetworkAffinity",
+        "NetworkDiscoverableLogin",
+        "NetworkSelfRegistration",
+        "OauthCustomScope",
+        "OauthCustomScopeApp",
+        "ObjectRelatedUrl",
+        "OmniSupervisorConfig",
+        "OmniSupervisorConfigAction",
+        "OmniSupervisorConfigGroup",
+        "OmniSupervisorConfigProfile",
+        "OmniSupervisorConfigQueue",
+        "OmniSupervisorConfigSkill",
+        "OmniSupervisorConfigUser",
+        "OperatingHoursHoliday",
+        "OpportunityCompetitor",
+        "OpportunityLineItemSplit",
+        "Order",
+        "OrderItem",
+        "OrgMetric",
+        "OrgMetricScanResult",
+        "OrgMetricScanSummary",
+        "PartyConsent",
+        "PendingServiceRouting",
+        "PersonAccountOwnerPowerUser",
+        "PipelineInspMetricConfig",
+        "PlatformCachePartition",
+        "PlatformCachePartitionType",
+        "PortalDelegablePermissionSet",
+        "PresenceConfigDeclineReason",
+        "PresenceDeclineReason",
+        "PresenceUserConfigProfile",
+        "PresenceUserConfigUser",
+        "ProcessException",
+        "ProductConsumptionSchedule",
+        "ProfileSkill",
+        "ProfileSkillEndorsement",
+        "ProfileSkillUser",
+        "Prompt",
+        "PromptVersion",
+        "PushTopic",
+        "RecAlrtDataSrcExpSetDef",
+        "Recommendation",
+        "RecordAlert",
+        "RecordAlertTemplate",
+        "RedirectWhitelistUrl",
+        "SPSamlAttributes",
+        "SalesWorkQueueSettings",
+        "Scorecard",
+        "ScorecardAssociation",
+        "ScorecardMetric",
+        "SearchPromotionRule",
+        "Seller",
+        "ServiceContract",
+        "ServiceResource",
+        "ServiceResourceSkill",
+        "SharingRecordCollectionMember",
+        "SiteIframeWhiteListUrl",
+        "SiteRedirectMapping",
+        "Skill",
+        "SkillRequirement",
+        "SkillType",
+        "Snippet",
+        "Solution",
+        "Stamp",
+        "StampAssignment",
+        "StreamingChannel",
+        "SurveyEmailBranding",
+        "SurveyEngagementContext",
+        "Swarm",
+        "TableauHostMapping",
+        "Territory2ObjSharingConfig",
+        "Territory2ObjectExclusion",
+        "TerritoryMgmtObjectConfig",
+        "TestSuiteMembership",
+        "ThreatDetectionFeedback",
+        "TimelineObjectDefinition",
+        "TransactionSecurityPolicy",
+        "UserAccountTeamMember",
+        "UserCustomBadge",
+        "UserEmailCalendarSync",
+        "UserListView",
+        "UserListViewCriterion",
+        "UserProvAccount",
+        "UserProvAccountStaging",
+        "UserProvMockTarget",
+        "UserProvisioningConfig",
+        "UserProvisioningLog",
+        "UserProvisioningRequest",
+        "UserServicePresence",
+        "UserTeamMember",
+        "VendorCallCenterStatusMap",
+        "VideoVendorAdminConsent",
+        "WorkBadge",
+        "WorkThanks"
+    ],
+    "UnusedCustomObjects": [
+        "Add_Partner_Accounts__c",
+        "Customer_Reference__c",
+        "FlowPersonalConfiguration__c",
+        "FlowTableViewDefinition__c",
+        "Partner_Contacts__c",
+        "Project_Phase_Snapshot__c",
+        "Tax_Rates__c"
+    ],
+    "UnusedManagedCustomObjects": [
+        "DOZISF__Complete_Setting__c",
+        "DOZISF__ZoomInfo_Intent__c",
+        "DOZISF__ZoomInfo_Scoop__c",
+        "DOZISF__ZoomInfo__c",
+        "Field_Trip__Logistics__c",
+        "Gong__Agenda__c",
+        "Gong__Call_Invitee__c",
+        "Gong__Gong_Scorecard__c",
+        "Gong__Note__c",
+        "LID__Error_Log__c",
+        "LID__Log__c",
+        "LID__Setup_Data__c",
+        "LID__User_OAuth__c",
+        "LeanData__A2B_Group__c",
+        "LeanData__Access_Level_Assignment__c",
+        "LeanData__Buyer_Persona__c",
+        "LeanData__Campaign_Influence_Summary__c",
+        "LeanData__Campaign_Opportunity__c",
+        "LeanData__Channel_Association__c",
+        "LeanData__Continuous_Persona_On_Sobject__c",
+        "LeanData__History_Log__c",
+        "LeanData__Journey_Member__c",
+        "LeanData__Journey_Persona__c",
+        "LeanData__Journey_Task_Object__c",
+        "LeanData__Journey__c",
+        "LeanData__LD_Business_Unit__c",
+        "LeanData__LD_Dataset_Row__c",
+        "LeanData__LD_Dataset_Version__c",
+        "LeanData__LD_Dataset__c",
+        "LeanData__LD_JSON_Search__c",
+        "LeanData__LD_Journey_Member__c",
+        "LeanData__LD_Journey_Persona__c",
+        "LeanData__LD_Journey__c",
+        "LeanData__LD_Long_Log__c",
+        "LeanData__LD_Member__c",
+        "LeanData__LD_Partner_Callout__c",
+        "LeanData__LD_Partner_Log__c",
+        "LeanData__Lead_Conversion__c",
+        "LeanData__Marketing_Touch__c",
+        "LeanData__Mass_Convert_Lead__c",
+        "LeanData__Matched_View_Setting__c",
+        "LeanData__Matching_Token__c",
+        "LeanData__Meeting_Log__c",
+        "LeanData__One_Time_Buyer_Persona_History__c",
+        "LeanData__Opportunity_Campaign_Member__c",
+        "LeanData__Persona_Action__c",
+        "LeanData__Persona_Condition__c",
+        "LeanData__Potential_Match__c",
+        "LeanData__Quarterly_Metric__c",
+        "LeanData__Relationship_History_Log__c",
+        "LeanData__Reporting_Log__c",
+        "LeanData__Reporting_Setting__c",
+        "LeanData__Round_Robin_Grouping__c",
+        "LeanData__Round_Robin_Setting_Lock__c",
+        "LeanData__Tagging_Log__c",
+        "LeanData__Temporary_Marketing_Touch__c",
+        "LeanData__Trigger_Setting__c",
+        "LinkSquares__DisplaySetting__c",
+        "LinkSquares__FilterRow__c",
+        "LinkSquares__SortRow__c",
+        "LinkSquares__TableToken__c",
+        "Loopio__Loopio_Account_Project__c",
+        "Loopio__Loopio_Project__c",
+        "MC4SF__MC_Campaign_Hourly_Stats__c",
+        "MC4SF__MC_Campaign__c",
+        "MC4SF__MC_Interest_Group__c",
+        "MC4SF__MC_Interest_Grouping__c",
+        "MC4SF__MC_List__c",
+        "MC4SF__MC_Merge_Variable__c",
+        "MC4SF__MC_Query_Filter__c",
+        "MC4SF__MC_Query__c",
+        "MC4SF__MC_Static_Segment__c",
+        "MC4SF__MC_Subscriber_Activity__c",
+        "MC4SF__MC_Subscriber__c",
+        "SBQQ__AttributeSet__c",
+        "SBQQ__AttributeValue__c",
+        "SBQQ__BlockPrice__c",
+        "SBQQ__ColumnMetadata__c",
+        "SBQQ__ConfigurationAttribute__c",
+        "SBQQ__ConfigurationRule__c",
+        "SBQQ__Cost__c",
+        "SBQQ__CustomActionCondition__c",
+        "SBQQ__CustomScript__c",
+        "SBQQ__Dimension__c",
+        "SBQQ__DiscountCategory__c",
+        "SBQQ__DiscountTier__c",
+        "SBQQ__ErrorCondition__c",
+        "SBQQ__FavoriteProduct__c",
+        "SBQQ__FavoriteShare__c",
+        "SBQQ__Favorite__c",
+        "SBQQ__FieldMetadata__c",
+        "SBQQ__FieldSetMetadata__c",
+        "SBQQ__ImportColumn__c",
+        "SBQQ__ImportFormat__c",
+        "SBQQ__Localization__c",
+        "SBQQ__LookupData__c",
+        "SBQQ__OptionConstraint__c",
+        "SBQQ__OrderItemConsumptionRate__c",
+        "SBQQ__OrderItemConsumptionSchedule__c",
+        "SBQQ__PriceSchedule__c",
+        "SBQQ__PriceTier__c",
+        "SBQQ__PricingGuidanceTier__c",
+        "SBQQ__PricingGuidance__c",
+        "SBQQ__ProcessInputCondition__c",
+        "SBQQ__ProcessInputValue__c",
+        "SBQQ__ProcessInput__c",
+        "SBQQ__ProductAction__c",
+        "SBQQ__ProductAttributeSet__c",
+        "SBQQ__ProductAttribute__c",
+        "SBQQ__ProductRule__c",
+        "SBQQ__QuoteLineConsumptionRate__c",
+        "SBQQ__QuoteLineConsumptionSchedule__c",
+        "SBQQ__QuoteLinePricingGuidance__c",
+        "SBQQ__QuoteProcess__c",
+        "SBQQ__RelatedContent__c",
+        "SBQQ__SearchFilter__c",
+        "SBQQ__SearchIndex__c",
+        "SBQQ__SolutionGroup__c",
+        "SBQQ__SubscribedQuoteLine__c",
+        "SBQQ__SubscriptionConsumptionRate__c",
+        "SBQQ__SubscriptionConsumptionSchedule__c",
+        "SBQQ__TaxExemptionCertificate__c",
+        "SBQQ__TermCondition__c",
+        "SBQQ__Theme__c",
+        "SBQQ__TimingLog__c",
+        "SBQQ__UpgradeSource__c",
+        "SBQQ__WebQuoteLine__c",
+        "SBQQ__WebQuote__c",
+        "bofc__BOFCAuditHistoryItem__c",
+        "bofc__BOFCAuditHistory__c",
+        "bofc__BOFCBulkLeadConversion__c",
+        "bofc__BOFCCertificate__c",
+        "bofc__BOFCCompareExport__c",
+        "bofc__BOFCErrorLogs__c",
+        "bofc__BOFCFieldsAnalyzerPicklistResult__c",
+        "bofc__BOFCFieldsAnalyzerResult__c",
+        "bofc__BOFCFieldsAnalyzer__c",
+        "bofc__BOFCListView__c",
+        "bofc__BOFCManageRecordType__c",
+        "bofc__BOFCOBFieldsDetails__c",
+        "bofc__BOFCObjectLimApex__c",
+        "bofc__BOFCOtherthings__c",
+        "bofc__BOFCProcessBuilders__c",
+        "bofc__BOFCProcessFlowAnalyser__c",
+        "bofc__BOFCProfileFLSDetails__c",
+        "bofc__BOFCReportResults__c",
+        "bofc__BOFCUserProfPerSet__c",
+        "bofc__BOFC_Object_Picklist__c",
+        "bofc__BOFC_Picklist_ValueSet_Item__c",
+        "bofc__BOFC_Picklist_ValueSet__c",
+        "ccpe_r__Line_Item_Criteria__c",
+        "ccpe_r__PSA_Options__c",
+        "ccpe_r__Retainer_Line_Item__c",
+        "ccpe_r__Retainer__c",
+        "dfsle__AgreementConfiguration__c",
+        "dfsle__BulkList__c",
+        "dfsle__BulkStatus__c",
+        "dfsle__CustomParameterMap__c",
+        "dfsle__CustomRecipient__c",
+        "dfsle__Document__c",
+        "dfsle__EnvelopeConfigurationDocument__c",
+        "dfsle__EnvelopeConfigurationRecipient__c",
+        "dfsle__EnvelopeConfiguration__c",
+        "dfsle__EnvelopeLocalization__c",
+        "dfsle__EnvelopeStatus__c",
+        "dfsle__Envelope__c",
+        "dfsle__GenTemplate__c",
+        "dfsle__Log__c",
+        "dfsle__RecipientStatus__c",
+        "dfsle__Recipient__c",
+        "dlrs__DeclarativeLookupRollupSummaries__c",
+        "dlrs__LookupChild__c",
+        "dlrs__LookupParent__c",
+        "dlrs__LookupRollupCalculateJob__c",
+        "dlrs__LookupRollupSummary__c",
+        "maps__AdvRouteContinuousTravel__c",
+        "maps__AdvRouteDataSet__c",
+        "maps__AdvRouteDefaultValue__c",
+        "maps__AdvRouteDefaultValuesGrouping__c",
+        "maps__AdvRouteOffDays__c",
+        "maps__AdvRouteOutputType__c",
+        "maps__AdvRoutePriority__c",
+        "maps__AdvRoutePromotionalPeriodConfiguration__c",
+        "maps__AdvRouteQueryFilterGrouping__c",
+        "maps__AdvRouteQueryFilter__c",
+        "maps__AdvRouteRoutableObject__c",
+        "maps__AdvRouteSettings__c",
+        "maps__AdvRouteTemplateUser__c",
+        "maps__AdvRouteTemplate__c",
+        "maps__AdvRouteVisitWindows__c",
+        "maps__AdvRouteWaypoint__c",
+        "maps__AdvRoute__c",
+        "maps__ArcGISBatchPushLog__c",
+        "maps__ArcGISBatchPushSetting__c",
+        "maps__ArcGISBatchPushTest__c",
+        "maps__AssignmentPlanRun__c",
+        "maps__AssignmentPlan__c",
+        "maps__AssignmentRule__c",
+        "maps__ButtonSet__c",
+        "maps__CalendarResourceShift__c",
+        "maps__Click2Create__c",
+        "maps__CustomAction__c",
+        "maps__DataLayerSetting__c",
+        "maps__DebugLog__c",
+        "maps__DriveProfile__c",
+        "maps__FolderPermission__c",
+        "maps__LiveAssetDailySummaryEvent__c",
+        "maps__LiveAssetDailySummary__c",
+        "maps__LiveAsset__c",
+        "maps__LiveAsyncError__c",
+        "maps__LiveDailyDriveTrip__c",
+        "maps__LiveDriverAssignment__c",
+        "maps__LiveDriver__c",
+        "maps__LiveEventAssociation__c",
+        "maps__LiveEvent__c",
+        "maps__LiveHolidayRelationship__c",
+        "maps__LiveHolidayTime__c",
+        "maps__LiveIoTDevice__c",
+        "maps__LiveSummaryStateMileage__c",
+        "maps__LiveSummaryStopRelationshipConfig__c",
+        "maps__LiveWorkingHours__c",
+        "maps__Location__c",
+        "maps__Route__c",
+        "maps__ScheduledJob__c",
+        "maps__ShapeLayerGeometry__c",
+        "maps__ShapeLayer__c",
+        "maps__TPAlignment__c",
+        "maps__TPArea__c",
+        "maps__TPComment__c",
+        "maps__TPDataSet__c",
+        "maps__TPHistory__c",
+        "maps__TPUnitAssignment__c",
+        "maps__TPUserPreference__c",
+        "maps__TerritoryAggregationSetting__c",
+        "maps__TerritoryAggregation__c",
+        "maps__TerritoryNode__c",
+        "maps__Timesheet_Activity__c",
+        "maps__Timesheet_Period__c",
+        "maps__Timesheet_Rule__c",
+        "maps__Timesheet_Travel__c",
+        "maps__Timesheet__c",
+        "maps__Waypoint__c",
+        "pi__Demo_Settings__c",
+        "pi__EngageCampaignRecipient__c",
+        "pi__ObjectChangeLog__c",
+        "pi__PardotTask__c",
+        "pi__Partner_Settings__c",
+        "rh2__Filter__c",
+        "rh2__PS_Exception__c",
+        "rh2__PS_Export_Rollups__c",
+        "rh2__PS_Object_Realtime__c",
+        "rh2__PS_Queue__c",
+        "rh2__PS_Rollup_Dummy__c",
+        "rh2__PS_Rollup_Group__c",
+        "rh2__RH_Job__c",
+        "rh2__Rollup_Helper_Record_Scope__c"
+    ],
+    "UnknownObjects": [
+        "Product2"
+    ]
+}
