@@ -1,0 +1,1574 @@
+{
+    "OrganizationId": "00D1I000001VBDGUA4",
+    "OrganizationName": "Euna Solutions",
+    "UserTypes": {
+        "Active": {
+            "CloudIntegrationUser": 1,
+            "AutomatedProcess": 4,
+            "Standard": 378,
+            "CspLitePortal": 590,
+            "Guest": 4
+        },
+        "Inactive": {
+            "Standard": 830,
+            "CsnOnly": 2,
+            "CspLitePortal": 4
+        }
+    },
+    "SandboxLicenseTypes": {
+        "PARTIAL": 1,
+        "DEVELOPER": 6,
+        "FULL": 1,
+        "DEVELOPER_PRO": 2
+    },
+    "Flows": {
+        "Managed": [
+            {
+                "label": "LeanData API Flow",
+                "description": null
+            },
+            {
+                "label": "BookIt: Request Credit",
+                "description": null
+            },
+            {
+                "label": "[Cloud Coach] Create Invoice",
+                "description": null
+            },
+            {
+                "label": "[Cloud Coach] Recognize Revenue",
+                "description": null
+            },
+            {
+                "label": "Apsona List View Button Merge Flow",
+                "description": null
+            },
+            {
+                "label": "Account Engagement Bulk Asset Copy Flow",
+                "description": null
+            },
+            {
+                "label": "Account Engagement Sandbox-Production Bulk Asset Copy Flow",
+                "description": null
+            }
+        ],
+        "Unmanaged": [
+            {
+                "label": "CB ACR Added Updates",
+                "description": null
+            },
+            {
+                "label": "CB Email to SFDC Flow",
+                "description": null
+            },
+            {
+                "label": "CB ACR Deleted",
+                "description": "ACR = Account Contact Relationship"
+            },
+            {
+                "label": "(Contract) - After Save Flow",
+                "description": null
+            },
+            {
+                "label": "(Quote Line) - Before Save Flow",
+                "description": null
+            },
+            {
+                "label": "CB Auto Add OCR",
+                "description": "Used by CB in a Process Builder; automatically adds an opportunity contact role that matches the person entered in the Lead Name field on the opportunity."
+            },
+            {
+                "label": "Bonfire AddEsourcingQuantityBUN003",
+                "description": null
+            },
+            {
+                "label": "Bonfire AddEsourcingQuantity",
+                "description": null
+            },
+            {
+                "label": "Bonfire AddProductsSubscribedtoOP",
+                "description": null
+            },
+            {
+                "label": "Bonfire Autopopulating Primary Contact ID on Opps",
+                "description": null
+            },
+            {
+                "label": "Bonfire (Campaign Member) After Save Flow",
+                "description": null
+            },
+            {
+                "label": "Bonfire (Campaign Member) Update/Create",
+                "description": null
+            },
+            {
+                "label": "Bonfire (Contact create) Before Save Flow",
+                "description": null
+            },
+            {
+                "label": "Bonfire Creating Contact Role on Opps",
+                "description": null
+            },
+            {
+                "label": "Bonfire Delete POC Trial",
+                "description": null
+            },
+            {
+                "label": "Bonfire (Event) Before Save Flow",
+                "description": null
+            },
+            {
+                "label": "Bonfire (Lead) After Save Flow",
+                "description": null
+            },
+            {
+                "label": "Bonfire (Opportunity Contact Role) After Save Flow",
+                "description": null
+            },
+            {
+                "label": "Bonfire (Opportunity Product Create) Before Save Flow",
+                "description": null
+            },
+            {
+                "label": "Bonfire (opp update) Save After Flow",
+                "description": null
+            },
+            {
+                "label": "(Contract) - Before Save Flow",
+                "description": null
+            },
+            {
+                "label": "Bonfire (Event) After Save Flow",
+                "description": null
+            },
+            {
+                "label": "Bonfire (Campaign Member) - Before Save Flow",
+                "description": null
+            },
+            {
+                "label": "CB Campaign Member Flow",
+                "description": null
+            },
+            {
+                "label": "Bonfire (Task) After Save Flow",
+                "description": null
+            },
+            {
+                "label": "Bonfire (Task) Before Save Flow",
+                "description": null
+            },
+            {
+                "label": "Bonfire (Pardot Cat Score Contact) After Save",
+                "description": null
+            },
+            {
+                "label": "(Quote) - After Save Flow",
+                "description": null
+            },
+            {
+                "label": "Quote Comments",
+                "description": null
+            },
+            {
+                "label": "Bonfire (Contact) Before Save",
+                "description": null
+            },
+            {
+                "label": "Net Promoter Score",
+                "description": null
+            },
+            {
+                "label": "Discovery Call Assessment",
+                "description": null
+            },
+            {
+                "label": "Customer Satisfaction",
+                "description": null
+            },
+            {
+                "label": "Account type is churned",
+                "description": "Account type is churned, moved record type to gty prospect"
+            },
+            {
+                "label": "Record is updated",
+                "description": null
+            },
+            {
+                "label": "Routing Flow",
+                "description": null
+            },
+            {
+                "label": "Route to Buyer Assistant",
+                "description": "Routes each message to an enhanced bot. You can customize the flow with business and routing rules."
+            },
+            {
+                "label": "Buyer Assistant - Send to Record Owner",
+                "description": "Uses omni-channel routing to send the messaging session passed into the flow to the record owner."
+            },
+            {
+                "label": "[BS] CASE-SLA Routing",
+                "description": null
+            },
+            {
+                "label": "Indiana Support Desk",
+                "description": null
+            },
+            {
+                "label": "[Screenflow] Case: Rhode Island Support Portal",
+                "description": "Rhode Island Support submission forms on Community Portal"
+            },
+            {
+                "label": "California Housing Support Flow",
+                "description": null
+            },
+            {
+                "label": "[AS]FeedItem - Send Email/Update Case",
+                "description": "When an agent creates a post on the case, an email is sent to the customer to inform them of a message. When a customer makes a post on a case, the case status is updated to Customer Responded."
+            },
+            {
+                "label": "[Cloud Coach] Card Updates to Project Task",
+                "description": null
+            },
+            {
+                "label": "[Cloud Coach] Entered Time on Card Updates to Card",
+                "description": null
+            },
+            {
+                "label": "[Cloud Coach] Project Task Marked as Complete Updates Task Fields",
+                "description": null
+            },
+            {
+                "label": "[Cloud Coach] Stamp Case Fields on New Project",
+                "description": null
+            },
+            {
+                "label": "[Cloud Coach] Project Task - Stamping Fields when Self Assign is Selected",
+                "description": null
+            },
+            {
+                "label": "[Cloud Coach] External Deliverable Communication",
+                "description": null
+            },
+            {
+                "label": "[Cloud Coach] T&M Task Milestone Invoicing",
+                "description": "Flow to handle 'Milestone' tasks for invoicing when marked as complete"
+            },
+            {
+                "label": "[Cloud Coach] Project Task - Email on Task Completion",
+                "description": null
+            },
+            {
+                "label": "[Cloud Coach] Project Owner Change Email",
+                "description": null
+            },
+            {
+                "label": "[Cloud Coach] Prevention of Task Deletion",
+                "description": null
+            },
+            {
+                "label": "Contact [AS] - Create Customer User",
+                "description": null
+            },
+            {
+                "label": "Account [ScrF] - Create Customer Users",
+                "description": null
+            },
+            {
+                "label": "[Cloud Coach] Prevention of Project Deletion",
+                "description": null
+            },
+            {
+                "label": "Event - Parent URL (After Save)",
+                "description": "Captures the URL or parent events so they can be further copied to any child records when those are created by EAC. Based on Solution described here: https://help.salesforce.com/s/articleView?id=000383259&type=1"
+            },
+            {
+                "label": "[Cloud Coach] Copy BAC to ETC",
+                "description": "Copy BAC to ETC on all Project Tasks and Cards"
+            },
+            {
+                "label": "MQC Activity Creation",
+                "description": "Added mapping for new field MQC Form URL."
+            },
+            {
+                "label": "[Cloud Coach] Project Automation That Sends Customer Survey",
+                "description": null
+            },
+            {
+                "label": "[Cloud Coach] Creation of Baselines from a Checkbox on Project",
+                "description": null
+            },
+            {
+                "label": "Case: Georgia DCA GrAAM Help Center",
+                "description": null
+            },
+            {
+                "label": "[Cloud Coach] Protected EPV TRUE on project creation",
+                "description": null
+            },
+            {
+                "label": "Opportunity [BCU] - Manager Forecast Category Override",
+                "description": "Conversion of Manager Forecast Category Override Flow"
+            },
+            {
+                "label": "Opportunity [BCU] - Role and Department Stamp Fields",
+                "description": "Converted Opportunity - Role and Department Stamp Fields flow"
+            },
+            {
+                "label": "Opportunity [BCU] - Director/Manager Notes History and Next Step History",
+                "description": "Converted Director notes history and next step history_equilavel flow, add in sequential logic, removed manager notes and removed next steps from directors notes"
+            },
+            {
+                "label": "[AS] Case - Send Survey Action",
+                "description": null
+            },
+            {
+                "label": "[Cloud Coach] Prevention of Card Deletion",
+                "description": null
+            },
+            {
+                "label": "[Cloud Coach] Prevention of Phase Deletion",
+                "description": null
+            },
+            {
+                "label": "Opportunity : Before save (Stage Change )",
+                "description": "This flow marks the checkbox true when stage is moved to shortlisted and keeps it as it is when opportunity moves ahead, but changes it to false if stage is moved back.\nIt also changes close date when op is marked as closed."
+            },
+            {
+                "label": "Euna Customer Satisfaction",
+                "description": null
+            },
+            {
+                "label": "Communication [AS] - Update Escalation Time Stamp on Case",
+                "description": null
+            },
+            {
+                "label": "Case [BCU] - Jira Automations",
+                "description": null
+            },
+            {
+                "label": "[BS] Case - Update Response Time",
+                "description": null
+            },
+            {
+                "label": "[AS] Case - Complete First Response Milestone On Case Close",
+                "description": null
+            },
+            {
+                "label": "Partner Account : After Closed won",
+                "description": null
+            },
+            {
+                "label": "Partner Account : After Save",
+                "description": null
+            },
+            {
+                "label": "Partner Account : Before Delete",
+                "description": null
+            },
+            {
+                "label": "MEDDPICC Fields",
+                "description": null
+            },
+            {
+                "label": "[Cloud Coach] Project Updates to Set TTFV Duration",
+                "description": null
+            },
+            {
+                "label": "Account [BCU] - NetSuite Requirements",
+                "description": null
+            },
+            {
+                "label": "[AS]Survey Response - Update Case",
+                "description": null
+            },
+            {
+                "label": "[Cloud Coach] Monthly Updates to Fields on Project",
+                "description": null
+            },
+            {
+                "label": "Work [BCU] - Jira Automations",
+                "description": null
+            },
+            {
+                "label": "Project Task [BCU] - Jira Automations",
+                "description": null
+            },
+            {
+                "label": "Case [AS] Update Account When Case Created",
+                "description": "Updates the related account with most recent case date and ID."
+            },
+            {
+                "label": "[Cloud Coach] Project - Calculate Duration Fields",
+                "description": "This flow will calculate the 'Total Duration (Working Days)' and 'Duration After Kickoff (Working Days)' fields on a project anytime the dates change."
+            },
+            {
+                "label": "[AS] Case - Send Case Survey Email",
+                "description": null
+            },
+            {
+                "label": "Bonfire Opportunity Process - Create/EditB",
+                "description": null
+            },
+            {
+                "label": "Bonfire (Account) Aftersave",
+                "description": null
+            },
+            {
+                "label": "Bonfire (Contact) After Save",
+                "description": null
+            },
+            {
+                "label": "Bonfire (Account) Before Save",
+                "description": "Adding Bonfire Account Record Type condition to run the flow"
+            },
+            {
+                "label": "Send Custom Record Notification to Users",
+                "description": null
+            },
+            {
+                "label": "[AS] - Case - Update Account on Contact",
+                "description": "When a contact does not have an account associated, a default account will be applied."
+            },
+            {
+                "label": "RFP : After Create",
+                "description": "Update RFP flag on Opportunity"
+            },
+            {
+                "label": "RFP : Before Delete",
+                "description": null
+            },
+            {
+                "label": "Survey Invitation [AS] - Update Case KPI Fields",
+                "description": null
+            },
+            {
+                "label": "Opportunity [BCU] - Stage Closed Process",
+                "description": "Updates completed when stage is set to Closed Won/Closed Lost."
+            },
+            {
+                "label": "CLONE - Opportunity Won Status Change - Euna",
+                "description": "Migrated from the CLONE - Opportunity Won Status Change - Euna process using multiple criteria.\nHousekeeping on Opportunity Won"
+            },
+            {
+                "label": "Opportunity [BCU] - Field Updates",
+                "description": "consolidating workflow rules CB Update Marketing Exclusion - RFP, CB Marketing Exclusion Update - New/Expansion, Back 2 Base Opportunity Owner Upate"
+            },
+            {
+                "label": "Opportunity [BCU] - Opportunity Type to Type Update",
+                "description": "Converted Opportunity - Citybase Opportunity Type to Type Update and Questica Opportunity Type Update - Sept 2023\n flows"
+            },
+            {
+                "label": "Opportunity [BCU] - SQL Date Stamp",
+                "description": "Converted opportunity SQL Date Stamp flow with hardcodes removed"
+            },
+            {
+                "label": "Opportunity [BCU] - Bonfire Field Updates",
+                "description": "Converted version (Opportunity) - Before Save Flow, removed recordtypes"
+            },
+            {
+                "label": "CB Lead Convert",
+                "description": null
+            },
+            {
+                "label": "[Cloud Coach] Stamp Opportunity Fields on new Project",
+                "description": "Stamps fields from the related parent Opportunity on the new Project when it is created"
+            },
+            {
+                "label": "Opportunity [ACU] - Field Updates",
+                "description": null
+            },
+            {
+                "label": "Opportunity [BCU] - CityBase Field Updates",
+                "description": null
+            },
+            {
+                "label": "Opportunity [BCU] - Update Contract Dates",
+                "description": "Before save flow to set contract dates converted workflow rule CB Lead Convert Default Fields and opportunity lost status change process builder"
+            },
+            {
+                "label": "(Quote) - Before Save Flow",
+                "description": null
+            },
+            {
+                "label": "[SCHD] - Send Email for Open Field Change Requests",
+                "description": null
+            },
+            {
+                "label": "Case [ACU] - Jira Automations",
+                "description": "Simplified isActive check"
+            },
+            {
+                "label": "Project Task [ACU] - Jira Automations",
+                "description": "simplified isActive check"
+            },
+            {
+                "label": "Case [AS] - Hard Bounce Email",
+                "description": null
+            },
+            {
+                "label": "[Cloud Coach] Update Task Record with Utilization Category",
+                "description": null
+            },
+            {
+                "label": "[Cloud Coach] Entered Hours on Task updates to Task Fields",
+                "description": null
+            },
+            {
+                "label": "Opportunity - Pricing Approval Status",
+                "description": "Sets the pricing approval status value to Requires Approval when pricing is updated on an opp."
+            },
+            {
+                "label": "[AS] Case - Scheduled Email Alert Waiting on Customer",
+                "description": "Email is sent after no activity from customer for 3 days and case hasn't been updated."
+            },
+            {
+                "label": "Product [BCU] - Field Updates",
+                "description": null
+            },
+            {
+                "label": "CASE [BS] - Update CSAT Rating Update Field",
+                "description": "When the CSAT Rating field is update, this flow will populate the current date time in the CSAT Rating update field."
+            },
+            {
+                "label": "[Cloud Coach] Roll Up Billable Hours (Phase)",
+                "description": "Roll up billable hours to phase level"
+            },
+            {
+                "label": "Opportunity - Opportunity ARR/Services Update F Fields",
+                "description": "Updates the \"Opportunity ARR F\" and  \"Opportunity Services F\" fields used for forecasting with the data from the related calculated fields."
+            },
+            {
+                "label": "[BS] Case - Remove Vendor Customer Contact",
+                "description": "When a case is created where the contact is of the account type vendor customer, the contact is removed."
+            },
+            {
+                "label": "[Cloud Coach] Project Updates to Health Fields",
+                "description": null
+            },
+            {
+                "label": "MQC Activity - Update MQL Date on Contact",
+                "description": null
+            },
+            {
+                "label": "Ops Requests - Request Process and Email Notifications",
+                "description": "Assigns new requests, sends notifications and updates close dates. Auto-archives 3 months after the completed date on requests with a status of \"Done\"."
+            },
+            {
+                "label": "[AS] EmailMessage: Update Case Fields",
+                "description": "Update fields on the case record with predefined values through Custom Metadata when a case is created through email to case."
+            },
+            {
+                "label": "[BS] - EmailMessage - Update From field",
+                "description": null
+            },
+            {
+                "label": "Opportunity [ACU] - Send Emails",
+                "description": "Unified Automation to send emails triggered by opportunity- Trimmed, scheduled paths revised.\nAdding Work Flow Rules"
+            },
+            {
+                "label": "Opportunity - Update SAL+SQL on Primary Contact",
+                "description": "06.0.8.2025 - added Created Role Stamp\n05.02.2025 - Updated with decision element for created or updated"
+            },
+            {
+                "label": "[BS] Account - Update Record Type based on Customer Status",
+                "description": "Added Customer Child Account Type"
+            },
+            {
+                "label": "Contract Grading - Grading Flow",
+                "description": "Flow that calculates the grade for Contract grading record."
+            },
+            {
+                "label": "Ops Requests - Submit a New Request",
+                "description": "Screen flow that allows users to submit a new ops request."
+            }
+        ]
+    },
+    "ProcessBuilders": {
+        "Managed": [
+            {
+                "label": "Insight from Salesloft - Update SalesLoft Most Recent Cadence Fields on Opportunity",
+                "description": "This is used for the Insight from SalesLoft managed package. When a Contact Role a Primary Contact is created or edited and the related Contact has 'Most Recent Cadence' SalesLoft fields populated, write those fields to the Opportunity record related to the Contact Role."
+            }
+        ],
+        "Unmanaged": [
+            {
+                "label": "FCI - AE call task completed",
+                "description": null
+            },
+            {
+                "label": "FCI - AE call task created",
+                "description": null
+            },
+            {
+                "label": "Lead: Set Lead Email ID",
+                "description": "Sets the unique lead id using the email and BU to help separate leads"
+            },
+            {
+                "label": "CB Opp Product Flow",
+                "description": null
+            },
+            {
+                "label": "Campaign Member: Existing Contact to Lead",
+                "description": "Creates a lead record for an existing contact when the contact fills out a campaign form."
+            },
+            {
+                "label": "CB/BFCampaign Member PB",
+                "description": null
+            },
+            {
+                "label": "CB Contact Flow",
+                "description": null
+            },
+            {
+                "label": "CB Lead Flow",
+                "description": null
+            }
+        ]
+    },
+    "ApexTriggers": {
+        "Account": {
+            "Managed": 10,
+            "Unmanaged": 2
+        },
+        "Contact": {
+            "Managed": 10,
+            "Unmanaged": 0
+        },
+        "Lead": {
+            "Managed": 7,
+            "Unmanaged": 0
+        },
+        "Campaign": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "pi__PardotTask__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "rh2__PS_Describe__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "Event": {
+            "Managed": 3,
+            "Unmanaged": 0
+        },
+        "rh2__PS_Export_Rollups__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "rh2__PS_Queue__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "rh2__RH_Job__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "rh2__PS_Rollup_Dummy__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "Task": {
+            "Managed": 4,
+            "Unmanaged": 0
+        },
+        "Opportunity": {
+            "Managed": 5,
+            "Unmanaged": 3
+        },
+        "AccountContactRelation": {
+            "Managed": 0,
+            "Unmanaged": 1
+        },
+        "BatchApexErrorEvent": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "CampaignMember": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "Case": {
+            "Managed": 5,
+            "Unmanaged": 1
+        },
+        "User": {
+            "Managed": 3,
+            "Unmanaged": 0
+        },
+        "LeanData__Routing_Deployment__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "LeanData__LD_Member__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "LeanData__Access_Level_Assignment__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "LeanData__Round_Robin_Setting__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "LeanData__Round_Robin_Pool__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "LeanData__Round_Robin_Schedule_Setting__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__RelatedContent__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__BlockPrice__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__ColumnMetadata__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__ConfigurationAttribute__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "SBQQ__ConfigurationRule__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "ConsumptionSchedule": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "Contract": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "SBQQ__CustomAction__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "SBQQ__CustomActionCondition__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__CustomScript__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "SBQQ__Dimension__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__DiscountSchedule__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__DiscountTier__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__ErrorCondition__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "SBQQ__FieldSetMetadata__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__LineColumn__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__Localization__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "SBQQ__LookupQuery__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "OpportunityLineItem": {
+            "Managed": 1,
+            "Unmanaged": 1
+        },
+        "OrderItem": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "Order": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__PriceAction__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "SBQQ__PriceCondition__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "SBQQ__PriceRule__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "SBQQ__PricingGuidanceTier__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__ProcessInput__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__ProductAction__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "Product2": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "ProductConsumptionSchedule": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "SBQQ__ProductFeature__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__ProductOption__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "SBQQ__ProductRule__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "SBQQ__Quote__c": {
+            "Managed": 2,
+            "Unmanaged": 1
+        },
+        "SBQQ__QuoteDocument__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__QuoteLine__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "SBQQ__QuoteLineConsumptionRate__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__QuoteLineConsumptionSchedule__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "SBQQ__QuoteLineGroup__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__QuoteTemplate__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "SBQQ__QuoteTerm__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__SubscribedAsset__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__Subscription__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__SubscriptionConsumptionRate__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__SubscriptionConsumptionSchedule__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__SummaryVariable__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__TaxExemptionCertificate__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__TemplateContent__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "SBQQ__TemplateSection__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__TermCondition__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "SBQQ__Theme__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "dlrs__LookupChild__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "dlrs__LookupRollupSummary__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "Gong__Gong_Call__c": {
+            "Managed": 3,
+            "Unmanaged": 0
+        },
+        "MC4SF__MC_List__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "MC4SF__MC_Subscriber__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "MC4SF__MC_Subscriber_Activity__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "TopicAssignment": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "LeanData__LD_Dataset__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "LeanData__LD_Dataset_Version__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "LinkSquares__ErrorLog__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "LinkSquares__Error__e": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "LinkSquares__FilterRow__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "LinkSquares__FinalizeAgreement__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "LinkSquares__Request__e": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "LinkSquares__SortRow__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "LinkSquares__TableToken__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "LinkSquares__TemplateMapping__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "LinkSquares__TokenMapping__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Agenda_Item__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Allocation__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "project_cloud__Allocation_Group__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Allocation_Summary__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__BAU__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Board__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "project_cloud__Board_Member__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "project_cloud__Board_Process_Step__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "project_cloud__Capability__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Card__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "project_cloud__Card_Member__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Checklist__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Checklist_Group__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Checklist_Item__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Cloud_Coach_Event__e": {
+            "Managed": 1,
+            "Unmanaged": 1
+        },
+        "project_cloud__Cross_Project_Dependency__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Customer_Interaction__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "project_cloud__Demo_Data__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Expense2__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "project_cloud__External_Resource__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "FeedComment": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "FeedItem": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Financial_Benefit__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "project_cloud__Goal__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Invoice_Line_Item__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__KPI_Area__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__KPI__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__KPI_Schedule__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Lightning_Definition__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Meeting_Attendee__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "project_cloud__Meeting__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "project_cloud__Member__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Milestone_Process_Step__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Minute__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "Note": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Personal_Checklist_Item__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Project__c": {
+            "Managed": 5,
+            "Unmanaged": 1
+        },
+        "project_cloud__Project_Metadata__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Project_Milestone__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Project_Phase__c": {
+            "Managed": 4,
+            "Unmanaged": 1
+        },
+        "project_cloud__Project_Plan_Group__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Project_Settings__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Project_Stage_Gate__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Project_Sub_Phase__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Project_Sub_Task__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Project_Task__c": {
+            "Managed": 5,
+            "Unmanaged": 0
+        },
+        "project_cloud__Project_Task_Dependency__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Quick_Allocation__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Requirement_Area__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Requirement__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "project_cloud__Requirement_Rating__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Resource_Assignment__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "project_cloud__Resource_Assignment_Daily__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Resource__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Resource_Placeholder__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Resource_Request__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Resource_Summary__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Schedule__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Scorecard__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "project_cloud__Scorecard_Metric__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Scorecard_Process__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Scorecard_Process_Metric__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Stage_Gate_Checklist_Item__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Stage_Gate_Checklist_Item_Status__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Stage_Gate_Process_Step__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Stakeholder_Activity__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "project_cloud__Stakeholder_Contact__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "project_cloud__Tag_Link__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Ticket__c": {
+            "Managed": 4,
+            "Unmanaged": 0
+        },
+        "project_cloud__Work__c": {
+            "Managed": 12,
+            "Unmanaged": 1
+        },
+        "project_cloud__Timesheet__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Total_Allocation__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Work_Stub__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Work_Type__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "ccpe_ocp__External_Deliverable__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "ccpe_r__Line_Item_Criteria__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "ccpe_r__Rate__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "ccpe_r__Retainer__c": {
+            "Managed": 1,
+            "Unmanaged": 1
+        },
+        "ccpe_r__Retainer_Line_Item__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "ccpe_r__Skill_Rate__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "ccpe_r__Utilization__c": {
+            "Managed": 2,
+            "Unmanaged": 0
+        },
+        "maps__AdvRouteWaypoint__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "maps__AssignmentPlan__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "maps__AssignmentRule__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "maps__Layer__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "maps__LiveEvent__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "maps__Waypoint__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "maps__MarkerLayer__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "maps__ShapeLayer__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "maps__TerritoryAggregationSetting__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "maps__ShapeLayerGeometry__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "maps__TerritoryNode__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Color_Tag_Set__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Narrative__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Resource_Utilization__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Sprint__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Test_Plan_Assignee__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Test_Plan_Execution__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Test_Plan_Section__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "project_cloud__Test_Plan_Step__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "Field_Change_Request__c": {
+            "Managed": 0,
+            "Unmanaged": 1
+        },
+        "Customer_Address__c": {
+            "Managed": 0,
+            "Unmanaged": 1
+        },
+        "OpportunityContactRole": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "LeanData__LD_Journey__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        },
+        "LinkSquares__Agreement__c": {
+            "Managed": 1,
+            "Unmanaged": 0
+        }
+    },
+    "CustomObjectsByNamespace": {
+        "Unmanaged": 40,
+        "DOZISF": 5,
+        "Field_Trip": 4,
+        "Gong": 14,
+        "HubSpot_Inc": 1,
+        "LID": 8,
+        "LeanData": 76,
+        "LinkSquares": 22,
+        "Loopio": 5,
+        "MC4SF": 15,
+        "SBQQ": 84,
+        "apsona": 1,
+        "bofc": 31,
+        "ccpe_ocp": 3,
+        "ccpe_r": 8,
+        "dfsle": 35,
+        "dlrs": 8,
+        "maps": 85,
+        "pi": 19,
+        "project_cloud": 121,
+        "rh2": 17
+    },
+    "ApexClassesByNamespace": {
+        "Unmanaged": 91,
+        "Gong": 23,
+        "DOZISF": 43,
+        "HubSpot_Inc": 6,
+        "SBQQ": 844,
+        "usf3": 31,
+        "project_cloud": 366,
+        "totango": 8,
+        "LinkSquares": 192,
+        "apsona": 8,
+        "LeanData": 169,
+        "pi": 390,
+        "ccpe_r": 18,
+        "MC4SF": 96,
+        "bofc": 197,
+        "maps": 321,
+        "relateiq": 4,
+        "rh2": 201,
+        "dlrs": 115,
+        "dfsle": 412,
+        "LID": 60,
+        "Field_Trip": 11,
+        "ccpe_ocp": 16,
+        "ca_collab_2_0": 2,
+        "Loopio": 15
+    },
+    "LimitedLicensePackages": {
+        "apsona": {
+            "Used": 2,
+            "Allowed": 3
+        },
+        "project_cloud": {
+            "Used": 100,
+            "Allowed": 102
+        }
+    },
+    "UnlimitedLicensePackages": [
+        "CloudAmpDash",
+        "sf_chttr_apps",
+        "sf_com_apps",
+        "relateiq",
+        "DOZISF",
+        "HubSpot_Inc",
+        "SIQCloud",
+        "OIQ",
+        "b2bma",
+        "pi",
+        "rh2",
+        "SalesLoft1",
+        "LID",
+        "LeanData",
+        "totango",
+        "Field_Trip",
+        "SBQQ",
+        "bofc",
+        "dlrs",
+        "dfsle",
+        "Gong",
+        "MC4SF",
+        "Loopio",
+        "zoom_for_pardot",
+        "LinkSquares",
+        "ccpe_ocp",
+        "ccpe_r",
+        "maps",
+        "ca_collab_2_0",
+        "usf3",
+        "LinkSquares"
+    ],
+    "FailedFlowInterviewsTotal": 383,
+    "SitesActiveTotal": 7,
+    "ActiveFeatureLicenseMetric": {
+        "SFContentUser": {
+            "Active": 1,
+            "Total": 413
+        },
+        "ChatterAnswersUser": {
+            "Active": 0,
+            "Total": 558000
+        },
+        "OfflineUser": {
+            "Active": 1,
+            "Total": 413
+        },
+        "LiveAgentUser": {
+            "Active": 0,
+            "Total": 312
+        },
+        "MarketingUser": {
+            "Active": 29,
+            "Total": 1413
+        },
+        "InteractionUser": {
+            "Active": 5,
+            "Total": 413
+        },
+        "MobileUser": {
+            "Active": 0,
+            "Total": 314
+        },
+        "KnowledgeUser": {
+            "Active": 182,
+            "Total": 312
+        },
+        "SupportUser": {
+            "Active": 62,
+            "Total": 312
+        }
+    },
+    "ProfileUsage": {
+        "Euna Customer Community Login User": 590,
+        "Customer Success": 137,
+        "Questica - Sales User": 31,
+        "Euna Sales Director": 17,
+        "eCivis - Sales User": 15,
+        "Questica - Marketing Admin": 15,
+        "Bonfire - AE Rep User": 13,
+        "Bonfire - SDR User": 11,
+        "eCivis - ADE": 11,
+        "BidManager": 9,
+        "CityBase - Sales User": 8,
+        "GTY C Level Exec": 7,
+        "Questica - ADE": 7,
+        "Bonfire - CS User": 5,
+        "Read Only": 2,
+        "Sherpa - Sales Team Admin": 2,
+        "SUMO Logic": 1,
+        "External Project View Profile": 1,
+        "Euna Experience Cloud Profile": 1,
+        "Default Help Center Profile": 1,
+        "Euna Customer Public User": 1
+    }
+}
